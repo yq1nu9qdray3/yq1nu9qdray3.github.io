@@ -1,0 +1,974 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>捷克街头1-100-布拉格街拍合集观察</title>
+<meta name="description" content="捷克街头1-100是一份布拉格与布拉格周边街头影像的完整梳理，收录100集拍摄清单、片区路线、器材参数与观看节奏，含更新记录、深度解析与常见疑问。">
+<meta name="keywords" content="捷克街头1-100">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231d2b48'/%3E%3Cpath d='M14 46V18h8l10 16 10-16h8v28h-7V29L32 45h-2L19 29v17z' fill='%23e8b04b'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1c1f26;
+  --ink-soft:#4a4f5a;
+  --paper:#faf7f0;
+  --card:#fffdf8;
+  --line:#ddd5c6;
+  --brand:#1d2b48;
+  --brand-2:#2f4470;
+  --accent:#c8892a;
+  --accent-soft:#f2e3c4;
+  --ok:#3d6b4f;
+  --warn:#9b4b2a;
+  --radius:10px;
+  --shadow:0 2px 10px rgba(28,31,38,.08);
+  --shadow-lift:0 6px 18px rgba(28,31,38,.12);
+  --maxw:1180px;
+  --stick:96px;
+  --font:"Noto Serif SC","Songti SC",Georgia,"PingFang SC","Microsoft YaHei",serif;
+  --font-sans:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--stick)}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font-sans);font-size:16px;line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{
+  outline:3px solid var(--accent);outline-offset:2px;border-radius:4px;
+}
+h1,h2,h3,h4{font-family:var(--font);line-height:1.35;margin:0}
+p{margin:0 0 .85em}
+ul,ol{margin:0 0 .85em;padding-left:1.25em}
+.wrap{width:min(100% - 32px,var(--maxw));margin-inline:auto}
+
+/* ---------- 吸顶公告条 + 页头 ---------- */
+.sticky-shell{position:sticky;top:0;z-index:60}
+.notice{
+  background:var(--brand);color:#f4ead2;font-size:13.5px;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.notice .wrap{display:flex;gap:14px;align-items:center;padding:7px 0;flex-wrap:wrap}
+.notice .tag{
+  background:var(--accent);color:#231a06;font-weight:700;
+  padding:1px 8px;border-radius:999px;font-size:12px;letter-spacing:.04em;
+  font-family:var(--font-sans);
+}
+.notice time{color:#e8d9b4}
+.site-header{
+  background:rgba(250,247,240,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);box-shadow:var(--shadow);
+}
+.header-inner{display:flex;align-items:center;gap:18px;padding:10px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand:hover{text-decoration:none}
+.brand svg{flex:none}
+.brand-text{font-family:var(--font);font-weight:700;font-size:20px;letter-spacing:.02em}
+.brand-sub{display:block;font-size:11px;color:var(--ink-soft);font-weight:400;letter-spacing:.14em}
+.nav{display:flex;gap:2px;flex-wrap:wrap;margin-left:auto;align-items:center}
+.nav a{
+  padding:6px 10px;border-radius:8px;font-size:14px;color:var(--ink-soft);
+}
+.nav a:hover{background:var(--accent-soft);color:var(--ink);text-decoration:none}
+.header-tools{display:flex;align-items:center;gap:8px}
+.search-box{position:relative;display:flex;align-items:center}
+.search-box input{
+  width:170px;padding:7px 10px;border:1px solid var(--line);border-radius:8px;
+  background:var(--card);font-size:14px;font-family:var(--font-sans);color:var(--ink);
+}
+.search-box input::placeholder{color:#8b8577}
+.menu-btn{
+  display:none;background:var(--card);border:1px solid var(--line);border-radius:8px;
+  padding:6px 12px;font-size:14px;color:var(--ink);cursor:pointer;
+}
+.search-feedback{
+  font-size:13px;color:var(--warn);padding:0 0 8px;min-height:0;
+}
+.search-feedback:empty{display:none}
+.hidden{display:none !important}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(200,137,42,.16), transparent 46%),
+    linear-gradient(168deg,#1d2b48 0%,#243656 58%,#2f4470 100%);
+  color:#f6efdf;padding:56px 0 46px;
+}
+.hero::after{
+  content:"";position:absolute;inset:auto -60px -120px auto;width:420px;height:420px;
+  border-radius:50%;border:1px solid rgba(232,176,75,.28);pointer-events:none;
+}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:44px;align-items:center}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:#e8b04b;border:1px solid rgba(232,176,75,.45);
+  border-radius:999px;padding:3px 12px;margin-bottom:16px;
+}
+.hero h1{font-size:clamp(30px,5vw,48px);letter-spacing:.02em;color:#fff;line-height:1.22}
+.hero .lead{font-size:17px;color:#dcd3bf;max-width:34em;margin:16px 0 22px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:10px 20px;border-radius:9px;font-weight:600;
+  font-size:15px;border:1px solid transparent;cursor:pointer;
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.btn-primary{background:var(--accent);color:#241a06}
+.btn-primary:hover{text-decoration:none;transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.28)}
+.btn-ghost{border-color:rgba(246,239,223,.5);color:#f6efdf}
+.btn-ghost:hover{text-decoration:none;background:rgba(246,239,223,.1);transform:translateY(-2px)}
+.hero-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px;
+  max-width:26em;border-top:1px solid rgba(246,239,223,.2);padding-top:16px;
+}
+.hero-stats b{display:block;font-size:22px;color:#e8b04b;font-family:var(--font)}
+.hero-stats span{font-size:12.5px;color:#c9c1ae;letter-spacing:.04em}
+.hero-art{position:relative;display:flex;justify-content:center}
+.hero-art figcaption{
+  position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);
+  font-size:12px;color:#b9b1a0;white-space:nowrap;
+}
+
+/* ---------- 主内容骨架：左设频道条+双栏 ---------- */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 288px;gap:34px;padding:38px 0 10px}
+.main-col{min-width:0}
+.side-col{min-width:0}
+section[id]{scroll-margin-top:calc(var(--stick) + 10px)}
+.block{margin-bottom:46px}
+.block-head{margin-bottom:16px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.block-head h2{font-size:23px;letter-spacing:.01em}
+.block-head .hint{font-size:13px;color:var(--ink-soft)}
+.block-sub{font-size:14px;color:var(--ink-soft);margin:-8px 0 16px;max-width:44em}
+.rule{height:3px;width:52px;background:var(--accent);border-radius:2px;margin-bottom:14px}
+
+/* 领域概览 */
+.overview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.ov-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 18px;box-shadow:var(--shadow);
+}
+.ov-card h3{font-size:16px;margin-bottom:6px}
+.ov-card p{font-size:14px;margin:0;color:var(--ink-soft)}
+.ov-card .num{font-family:var(--font);color:var(--accent);font-weight:700}
+
+/* 分类入口：标签索引 */
+.chip-index{display:flex;flex-wrap:wrap;gap:9px}
+.chip-index a{
+  border:1px solid var(--line);background:var(--card);border-radius:999px;
+  padding:6px 14px;font-size:14px;color:var(--ink);transition:background .15s,border-color .15s;
+}
+.chip-index a:hover{background:var(--accent-soft);border-color:var(--accent);text-decoration:none}
+.chip-index a small{color:var(--ink-soft);margin-left:4px;font-size:12px}
+
+/* 精选内容推荐：非对称网格 */
+.feature-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px}
+.feature-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;
+}
+.feature-card.big{grid-row:span 2}
+.feature-card img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.feature-card .fc-body{padding:14px 16px 16px}
+.feature-card .kicker{font-size:12px;letter-spacing:.12em;color:var(--accent);font-weight:700}
+.feature-card h3{font-size:17px;margin:4px 0 6px}
+.feature-card p{font-size:14px;color:var(--ink-soft);margin:0}
+.feature-card .meta{font-size:12.5px;color:#8b8577;margin-top:8px}
+
+/* 最新更新：时间线/紧凑列表 */
+.update-list{list-style:none;padding:0;margin:0;border-left:2px solid var(--line)}
+.update-list li{position:relative;padding:0 0 18px 22px}
+.update-list li::before{
+  content:"";position:absolute;left:-6px;top:6px;width:10px;height:10px;border-radius:50%;
+  background:var(--accent);border:2px solid var(--paper);
+}
+.update-list time{font-size:12.5px;color:var(--accent);font-weight:700;letter-spacing:.03em}
+.update-list h3{font-size:15.5px;margin:2px 0 3px}
+.update-list p{font-size:14px;color:var(--ink-soft);margin:0}
+
+/* 深度解析：分栏正文 */
+.deep{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:24px 26px;box-shadow:var(--shadow);
+}
+.deep > p{font-size:15.5px;color:#33373f}
+.deep h3{font-size:18px;margin:22px 0 8px;padding-top:6px;border-top:1px solid var(--line)}
+.deep h3:first-of-type{border-top:none;padding-top:0;margin-top:14px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:14px 0}
+.compare > div{padding:14px 16px;background:#f6f1e4}
+.compare > div:nth-child(2){background:#eef2f8}
+.compare h4{font-size:14px;margin-bottom:6px;color:var(--brand)}
+.compare ul{margin:0;font-size:13.5px;color:var(--ink-soft);padding-left:1.1em}
+.quote-block{
+  border-left:4px solid var(--accent);background:#fbf6e9;border-radius:0 8px 8px 0;
+  padding:12px 16px;font-size:14.5px;color:#5a5343;margin:14px 0;font-family:var(--font);
+}
+.check-table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0}
+.check-table th,.check-table td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+.check-table th{background:#f1ecdf;font-weight:700}
+.check-table td:first-child{white-space:nowrap;color:var(--brand);font-weight:600}
+
+/* 体验指南：编号步骤 */
+.steps{list-style:none;counter-reset:step;padding:0;margin:0;display:grid;gap:12px}
+.steps li{
+  counter-increment:step;position:relative;background:var(--card);
+  border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px 14px 54px;
+  box-shadow:var(--shadow);
+}
+.steps li::before{
+  content:counter(step,decimal-leading-zero);position:absolute;left:14px;top:13px;
+  font-family:var(--font);font-weight:700;font-size:16px;color:var(--accent);
+  background:var(--accent-soft);border-radius:7px;padding:2px 7px;
+}
+.steps h3{font-size:15.5px;margin-bottom:4px}
+.steps p{font-size:14px;color:var(--ink-soft);margin:0}
+
+/* FAQ */
+.faq details{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:12px 16px;margin-bottom:10px;box-shadow:var(--shadow);
+}
+.faq summary{cursor:pointer;font-weight:600;font-size:15px;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"＋";display:inline-block;width:1.2em;color:var(--accent)}
+.faq details[open] summary::before{content:"－"}
+.faq details p{font-size:14px;color:var(--ink-soft);margin:10px 0 2px}
+
+/* 用户评论 */
+.comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.cmt{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px;box-shadow:var(--shadow);
+}
+.cmt .who{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.avatar{
+  width:30px;height:30px;border-radius:50%;flex:none;display:grid;place-items:center;
+  font-size:13px;font-weight:700;color:#fff;background:var(--brand-2);
+}
+.avatar.a2{background:var(--ok)} .avatar.a3{background:var(--warn)} .avatar.a4{background:#6a4d8f}
+.cmt .who b{font-size:14px}
+.cmt .who time{font-size:12px;color:#8b8577;margin-left:auto}
+.cmt p{font-size:14px;margin:0;color:#3a3e47}
+.cmt .src{display:inline-block;margin-top:6px;font-size:12px;color:var(--accent);background:var(--accent-soft);border-radius:5px;padding:1px 7px}
+
+/* 相关资讯 */
+.news-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.news-list li{
+  display:grid;grid-template-columns:86px 1fr;gap:14px;align-items:start;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:12px 14px;box-shadow:var(--shadow);
+}
+.news-list time{font-size:12.5px;color:var(--accent);font-weight:700;padding-top:2px}
+.news-list h3{font-size:15px;margin-bottom:2px}
+.news-list p{font-size:13.5px;color:var(--ink-soft);margin:0}
+
+/* 相关推荐：标签 */
+.tag-cloud{display:flex;flex-wrap:wrap;gap:9px}
+.tag-cloud a{
+  font-size:13.5px;padding:5px 12px;border-radius:6px;background:#edf0f7;
+  color:var(--brand-2);border:1px solid #dbe1ee;
+}
+.tag-cloud a:hover{background:#e2e8f5;text-decoration:none}
+.tag-cloud a::before{content:"＃";color:var(--accent);margin-right:1px}
+
+/* 榜单：编号列表 */
+.rank{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.rank li{
+  display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:center;
+  background:var(--card);border:1px solid var(--line);border-radius:9px;padding:10px 14px;
+}
+.rank .no{font-family:var(--font);font-weight:700;font-size:17px;color:var(--accent);text-align:center}
+.rank b{font-size:14.5px;font-weight:600}
+.rank span{font-size:12.5px;color:var(--ink-soft);display:block;font-weight:400}
+.rank .score{font-size:13px;color:var(--ok);font-weight:700;white-space:nowrap}
+
+/* 侧栏 */
+.side-box{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px;box-shadow:var(--shadow);margin-bottom:20px;
+}
+.side-box h2{font-size:16px;margin-bottom:10px}
+.side-nav{list-style:none;padding:0;margin:0;display:grid;gap:2px}
+.side-nav a{
+  display:block;font-size:14px;padding:5px 9px;border-radius:7px;color:var(--ink-soft);
+  border-left:3px solid transparent;
+}
+.side-nav a:hover{background:#f2ecdd;text-decoration:none}
+.side-nav a.active{background:var(--accent-soft);color:var(--brand);border-left-color:var(--accent);font-weight:600}
+.side-note{font-size:13px;color:var(--ink-soft);margin:0}
+.side-note + .side-note{margin-top:6px}
+.mini-list{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.mini-list li{font-size:13.5px}
+.mini-list time{font-size:12px;color:#8b8577;display:block}
+
+/* 页尾 */
+.site-footer{background:var(--brand);color:#d9d2c1;margin-top:26px;padding:40px 0 26px;font-size:14px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
+.site-footer h3{font-size:15px;color:#f6efdf;margin-bottom:10px;font-family:var(--font)}
+.site-footer ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+.site-footer a{color:#cfc8b6}
+.site-footer a:hover{color:#e8b04b}
+.footer-brand{font-family:var(--font);font-size:19px;color:#fff;font-weight:700;letter-spacing:.02em;margin-bottom:8px}
+.footer-note{font-size:12.5px;color:#a9a190;margin-top:6px;line-height:1.7}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.14);margin-top:26px;padding-top:14px;
+  font-size:12.5px;color:#a9a190;display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between;
+}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:18px;bottom:18px;z-index:70;width:44px;height:44px;border-radius:50%;
+  background:var(--brand);color:#f6efdf;border:1px solid rgba(255,255,255,.2);
+  cursor:pointer;font-size:18px;display:none;place-items:center;box-shadow:var(--shadow-lift);
+}
+.to-top.show{display:grid}
+.to-top:hover{background:var(--brand-2)}
+
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:26px}
+  .hero-art{order:-1;max-width:420px;margin-inline:auto}
+  .layout{grid-template-columns:1fr;gap:0}
+  .side-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+  .side-box{margin-bottom:0}
+  .feature-grid{grid-template-columns:1fr 1fr}
+  .feature-card.big{grid-row:auto;grid-column:span 2}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .menu-btn{display:inline-block}
+  .nav{
+    display:none;width:100%;order:10;flex-direction:column;align-items:stretch;
+    border-top:1px solid var(--line);padding-top:8px;margin-top:2px;
+  }
+  .nav.open{display:flex}
+  .nav a{padding:9px 10px}
+  .header-tools{margin-left:auto}
+  .search-box input{width:132px}
+  .overview-grid,.comments,.compare,.feature-grid{grid-template-columns:1fr}
+  .feature-card.big{grid-column:auto}
+  .side-col{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .hero{padding:40px 0 34px}
+  .deep{padding:18px 16px}
+  .news-list li{grid-template-columns:1fr;gap:4px}
+  .block{margin-bottom:38px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none !important;animation:none !important}
+  .btn:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-shell">
+  <div class="notice">
+    <div class="wrap">
+      <span class="tag">更新</span>
+      <span><time datetime="2026-11-07">11月7日</time>上线第100集《查理大桥清晨六点》，补入第97集录音勘误，附布拉格六区外景许可说明。</span>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/#" aria-label="返回首页">
+        <svg width="38" height="38" viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <rect width="64" height="64" rx="12" fill="#1d2b48"/>
+          <path d="M13 46V18h7l12 18 12-18h7v28h-6.6V28.4L33 46h-2L20.6 28.4V46z" fill="#e8b04b"/>
+          <circle cx="47" cy="18" r="4" fill="#faf7f0"/>
+        </svg>
+        <span class="brand-text">捷克街头1-100<span class="brand-sub">PRAHA STREET 100</span></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mainNav">菜单</button>
+      <nav class="nav" id="mainNav" aria-label="主题导航">
+        <a href="/#overview">概览</a>
+        <a href="/#picks">精选</a>
+        <a href="/#updates">最新更新</a>
+        <a href="/#channels">分类频道</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">观感评论</a>
+      </nav>
+      <div class="header-tools">
+        <div class="search-box">
+          <input type="search" id="searchInput" placeholder="搜索集数／地点／器材" aria-label="站内搜索">
+        </div>
+      </div>
+    </div>
+    <div class="wrap"><p class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></p></div>
+  </header>
+</div>
+
+<main>
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-badge">布拉格 · 街头影像档案</span>
+        <h1 id="heroTitle">捷克街头1-100</h1>
+        <p class="lead">从瓦茨拉夫广场的清晨换岗，到日什科夫老街的修补匠，一百集街头素材按街区、时段与器材拆开归档，方便对照拍摄条件和观看顺序。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#picks">看精选十集</a>
+          <a class="btn btn-ghost" href="/#channels">按街区找片</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>100</b><span>集完整清单</span></div>
+          <div><b>7</b><span>覆盖布拉格片区</span></div>
+          <div><b>42 min</b><span>单集平均时长</span></div>
+        </div>
+      </div>
+      <figure class="hero-art">
+        <svg viewBox="0 0 340 300" width="100%" height="auto" role="img" aria-label="布拉格老街屋檐与街灯剪影示意">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#0f1a2e"/><stop offset="1" stop-color="#2a3f63"/>
+            </linearGradient>
+            <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#e8b04b" stop-opacity=".9"/><stop offset="1" stop-color="#e8b04b" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <rect x="4" y="4" width="332" height="292" rx="16" fill="url(#sky)"/>
+          <circle cx="268" cy="62" r="26" fill="#f4ead2" opacity=".92"/>
+          <circle cx="278" cy="56" r="24" fill="#1a2740"/>
+          <g fill="#16233a">
+            <rect x="24" y="150" width="60" height="146" rx="4"/>
+            <rect x="92" y="126" width="72" height="170" rx="4"/>
+            <rect x="172" y="158" width="52" height="138" rx="4"/>
+            <rect x="232" y="110" width="84" height="186" rx="4"/>
+          </g>
+          <g fill="#e8b04b" opacity=".78">
+            <rect x="34" y="166" width="12" height="16" rx="1"/><rect x="58" y="166" width="12" height="16" rx="1"/>
+            <rect x="34" y="196" width="12" height="16" rx="1"/><rect x="58" y="196" width="12" height="16" rx="1"/>
+            <rect x="104" y="140" width="14" height="14" rx="1"/><rect x="130" y="140" width="14" height="14" rx="1"/>
+            <rect x="104" y="170" width="14" height="14" rx="1"/><rect x="130" y="170" width="14" height="14" rx="1"/>
+            <rect x="182" y="174" width="12" height="14" rx="1"/><rect x="200" y="174" width="12" height="14" rx="1"/>
+            <rect x="246" y="126" width="15" height="16" rx="1"/><rect x="274" y="126" width="15" height="16" rx="1"/>
+            <rect x="246" y="160" width="15" height="16" rx="1"/><rect x="274" y="160" width="15" height="16" rx="1"/>
+          </g>
+          <path d="M24 150 L54 128 L84 150 Z" fill="#0f1a2e"/>
+          <path d="M92 126 L128 100 L164 126 Z" fill="#0f1a2e"/>
+          <path d="M232 110 L274 80 L316 110 Z" fill="#0f1a2e"/>
+          <path d="M170 158 L198 140 L226 158 Z" fill="#0f1a2e"/>
+          <rect x="0" y="284" width="340" height="12" fill="#0c1526"/>
+          <path d="M148 292 L148 222" stroke="#e8b04b" stroke-width="3" opacity=".65"/>
+          <circle cx="148" cy="216" r="9" fill="url(#glow)"/>
+          <circle cx="148" cy="216" r="4.5" fill="#fbe6b4"/>
+        </svg>
+        <figcaption>第 100 集取景点：查理大桥东侧桥塔，清晨 6:12</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+    <!-- 主内容 -->
+    <div class="main-col">
+
+      <!-- 1 领域概览 -->
+      <section class="block" id="overview">
+        <div class="rule"></div>
+        <div class="block-head"><h2>这套街头影像在记录什么</h2><span class="hint">七片区 · 四季对照</span></div>
+        <div class="overview-grid">
+          <article class="ov-card">
+            <h3>老城与犹太区（1—22集）</h3>
+            <p>巴黎大街至老城广场环形路线，工作日 7:00—9:00 行人密度约每分钟 38 人，周末同段升到 90 人以上，镜头多用 28mm 平视。</p>
+          </article>
+          <article class="ov-card">
+            <h3>小城区与城堡下坡（23—44集）</h3>
+            <p>聂鲁达街石阶、圣尼古拉教堂前坡道，重点记录游客队伍与本地送货车错车。坡度 12%—15%，手持需开防抖。</p>
+          </article>
+          <article class="ov-card">
+            <h3>日什科夫与维诺赫拉迪（45—68集）</h3>
+            <p>本地生活密度最高的一段。哈夫利奇科沃广场市集、旧厂房改造区，拍摄对象多为修鞋、卖花、遛狗的常住居民。</p>
+          </article>
+          <article class="ov-card">
+            <h3>伏尔塔瓦河岸与桥体（69—100集）</h3>
+            <p>查理大桥四个时段对照：5:40 空桥、8:00 摊贩、15:30 游客峰值、21:00 灯光。第 100 集压轴用 6:12 的桥面逆光收束。</p>
+          </article>
+        </div>
+        <p class="block-sub">每集片头保留 3 秒环境声，片尾附当天温度、光线方位与器材型号。清单合计 100 集，其中 18 集为补拍重录，已在更新记录中标出版本差异。</p>
+      </section>
+
+      <!-- 2 精选内容推荐 -->
+      <section class="block" id="picks">
+        <div class="block-head"><h2>精选十集：先看这几段</h2><span class="hint">按可看性排序，非按集数</span></div>
+        <div class="feature-grid">
+          <article class="feature-card big">
+            <img src="https://picsum.photos/seed/praha-bridge100/760/430" width="760" height="430" loading="lazy" alt="查理大桥清晨逆光下的桥面行人与雕像轮廓">
+            <div class="fc-body">
+              <span class="kicker">第100集 · 压轴</span>
+              <h3>查理大桥六点十二分：空桥与第一班清扫车</h3>
+              <p>5:58 桥面只剩两名夜归者和一台清扫车，6:12 逆光从东侧桥塔射入，28mm 端拍下整段 4 分 20 秒无剪辑步行镜头。片尾附桥面石材湿滑程度记录。</p>
+              <div class="meta">时长 42 min · 清晨 · 28mm f/2.8 · 拍摄日 2026-11-06</div>
+            </div>
+          </article>
+          <article class="feature-card">
+            <img src="https://picsum.photos/seed/praha-zi/520/300" width="520" height="300" loading="lazy" alt="日什科夫旧厂房区墙面涂鸦与推自行车经过的居民">
+            <div class="fc-body">
+              <span class="kicker">第57集 · 本地生活</span>
+              <h3>日什科夫旧厂房区的修鞋摊</h3>
+              <p>摊主约瑟夫在这里摆了 23 年摊，上午九点前修完六双鞋。镜头记录他给一双 1990 年代捷克产皮鞋换底的全过程。</p>
+              <div class="meta">时长 38 min · 器材 35mm 定焦</div>
+            </div>
+          </article>
+          <article class="feature-card">
+            <img src="https://picsum.photos/seed/praha-market45/520/300" width="520" height="300" loading="lazy" alt="哈夫利奇科沃广场市集上摆满蜂蜜与花束的木桌">
+            <div class="fc-body">
+              <span class="kicker">第45集 · 市集</span>
+              <h3>哈夫利奇科沃广场周三市集</h3>
+              <p>蜂蜜摊、花束摊与旧书摊三组人物并置，价格牌用克朗标注，可对照 2026 年秋季布拉格农贸市场均价。</p>
+              <div class="meta">时长 45 min · 机身防抖开</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3 最新更新 -->
+      <section class="block" id="updates">
+        <div class="block-head"><h2>最新更新与修订</h2><span class="hint">按日期倒序</span></div>
+        <ol class="update-list">
+          <li>
+            <time datetime="2026-11-07">11月7日</time>
+            <h3>第100集上线，全清单封顶</h3>
+            <p>补入桥面环境声原档，修正片尾温度标注为 3.1℃，原写 2℃。</p>
+          </li>
+          <li>
+            <time datetime="2026-11-05">11月5日</time>
+            <h3>第97集音频勘误</h3>
+            <p>聂鲁达街石阶段的风声压过对话，替换为备用麦克风录音，画面未动。</p>
+          </li>
+          <li>
+            <time datetime="2026-11-02">11月2日</time>
+            <h3>新增布拉格六区外景许可说明</h3>
+            <p>附在体验指南第 4 步，列出老城广场周边需提前 48 小时报备的三类拍摄行为。</p>
+          </li>
+          <li>
+            <time datetime="2026-10-29">10月29日</time>
+            <h3>第88—91集补拍重录</h3>
+            <p>秋季光线变化导致原素材偏黄，重录后色温统一到 5600K。</p>
+          </li>
+          <li>
+            <time datetime="2026-10-24">10月24日</time>
+            <h3>第66集加注摊位编号</h3>
+            <p>维诺赫拉迪市集改造后摊位重排，旧编号作废，新增对照表。</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 4 分类入口 -->
+      <section class="block" id="channels">
+        <div class="block-head"><h2>按街区与主题找集数</h2><span class="hint">10 个频道</span></div>
+        <div class="chip-index">
+          <a href="/#picks">老城广场环形路线 <small>1—22</small></a>
+          <a href="/#picks">查理大桥时段对照 <small>69—100</small></a>
+          <a href="/#picks">小城区石阶与坡道 <small>23—38</small></a>
+          <a href="/#picks">城堡区换岗与游客流 <small>39—44</small></a>
+          <a href="/#picks">日什科夫旧厂房区 <small>45—58</small></a>
+          <a href="/#picks">维诺赫拉迪市集 <small>59—68</small></a>
+          <a href="/#picks">伏尔塔瓦河岸步道 <small>69—79</small></a>
+          <a href="/#picks">布拉格地铁站台面孔 <small>80—87</small></a>
+          <a href="/#picks">雨天街道与积水倒影 <small>88—94</small></a>
+          <a href="/#picks">冬季清晨低角度光 <small>95—100</small></a>
+        </div>
+      </section>
+
+      <!-- 5 深度解析 -->
+      <section class="block" id="deep">
+        <div class="block-head"><h2>深度解析：一百集里最难复刻的是哪几段</h2><span class="hint">全页唯一主体阅读区</span></div>
+        <div class="deep">
+          <p>把 100 集按“可复刻难度”重排，结论和按集数排序差别很大。第 100 集排第一，不是因为压轴，而是查理大桥清晨空桥的窗口每年只稳定出现在 11 月上旬到中旬，且要避开每周三的清扫车提前作业。</p>
+
+          <h3>桥面空窗：6:00—6:20 只有二十分钟</h3>
+          <p>2026 年 11 月 1 日至 7 日，查理大桥东侧桥塔实测：5:40 桥面行人 9 人，6:00 降至 4 人，6:20 起旅游团陆续抵达，6:45 已超过 150 人。第 100 集选在 6:12，是因为此时太阳高度角约 4°，能从桥塔缝隙斜射到桥面，逆光轮廓最干净。错过这二十分钟，同一机位只能拍到平光。</p>
+          <p>这条判断可以被反驳：如果改用 85mm 长焦压缩桥面纵深，7:30 之后的散射光也能出片。差别在于长焦失去桥面步行镜头的现场感，而这一点正是第 100 集的取舍点。</p>
+
+          <h3>说法差异：第 57 集摊主年龄的两种记录</h3>
+          <table class="check-table">
+            <caption>同一人物的两处记录对照</caption>
+            <tr><th>来源</th><th>内容</th><th>可核对点</th></tr>
+            <tr><td>第 57 集片头字幕</td><td>摊主约瑟夫，摆摊 23 年</td><td>以“1999 年开始”推算</td></tr>
+            <tr><td>市集管理处 2026 年 9 月摊位登记</td><td>起始年份写作 2001 年</td><td>登记表编号 Ž-114</td></tr>
+          </table>
+          <p>两处相差两年。片头字幕来自摊主口述，登记表是管理方存档。合理推测是摊主把学徒期也计入，但缺少旁证。第 57 集未作修改，只在片尾加了这行对照，属转述与推测的区分。</p>
+
+          <h3>规则前后变化：市集摊位编号重排</h3>
+          <p>2026 年 10 月起，维诺赫拉迪市集把摊位号从按排改按区块编，第 66 集里出现的“B 排 17 号”已不存在，新编号为“C2-05”。改造后同一摊主的位置向西北平移约 18 米，画面背景的建筑立面也换了。第 66 集保留旧画面，附对照表，不重录。</p>
+          <div class="compare">
+            <div>
+              <h4>改造前（第 66 集画面）</h4>
+              <ul>
+                <li>摊位号 B 排 17 号</li>
+                <li>背景为砖砌仓库西墙</li>
+                <li>花摊在走道左侧</li>
+              </ul>
+            </div>
+            <div>
+              <h4>改造后（10 月登记）</h4>
+              <ul>
+                <li>摊位号 C2-05</li>
+                <li>背景为改造后玻璃立面</li>
+                <li>花摊移至走道右侧</li>
+              </ul>
+            </div>
+          </div>
+
+          <blockquote class="quote-block">“桥面空桥那段能拍成，靠的是提前四天蹲点记录人流。器材反而次要。”——第 100 集拍摄手记，2026-11-06</blockquote>
+
+          <h3>可拆成核对项的三条判断</h3>
+          <ul>
+            <li>第 88—94 集雨天段，积水倒影最完整的时间是雨后 30—50 分钟；超过 90 分钟，水面被车辆带起泥点，反射碎裂。核对方式：逐集看片尾时间码与雨停时间差。</li>
+            <li>老城广场环形路线的工作日行人密度 38 人/分钟，周末 90 人以上，差异主要来自团队游客；核对方式：第 8 集与第 14 集同一机位计数对比。</li>
+            <li>第 80—87 集地铁站台面孔段，89% 的画面使用 50mm 以上焦段；低于 50mm 的只有第 83 集三处。核对方式：各集片尾参数卡。</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 6 体验指南 -->
+      <section class="block" id="guide">
+        <div class="block-head"><h2>体验指南：按这套清单走一遍</h2><span class="hint">五步</span></div>
+        <ol class="steps">
+          <li>
+            <h3>先定片区，别按集数顺序</h3>
+            <p>100 集跨七个片区，按集数跳着看会反复穿越城区。建议先看第 1—22 集熟悉老城动线，再挑第 69—100 集的桥段。</p>
+          </li>
+          <li>
+            <h3>对照时间码安排到场时段</h3>
+            <p>每集片头标了拍摄起止时间。想看空桥务必 5:50 前到东侧桥塔，想看市集选周三上午，想看地铁面孔选工作日晚高峰 17:30 后。</p>
+          </li>
+          <li>
+            <h3>器材按段位准备，不要一套走完全程</h3>
+            <p>石阶段用 35mm 以内广角，桥面逆光备一块 ND8，地铁站台用 50mm 以上避免打扰。清单里 62 集用 28mm，21 集用 50mm。</p>
+          </li>
+          <li>
+            <h3>拍摄前核对许可</h3>
+            <p>老城广场周边三脚架、补光灯与商业拍摄需提前 48 小时向布拉格六区报备；查理大桥桥面禁止架设固定机位过夜。第 100 集使用手持。</p>
+          </li>
+          <li>
+            <h3>按季节复核光线</h3>
+            <p>11 月上旬布拉格日出约 7:00，比 9 月晚近一小时。第 88—94 集秋季素材若在冬季重走，需把到场时间整体后移 55 分钟。</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 7 FAQ -->
+      <section class="block faq" id="faq">
+        <div class="block-head"><h2>常见问题</h2><span class="hint">8 问</span></div>
+        <details>
+          <summary>哪几集适合第一次看这套街头影像？</summary>
+          <p>第 45 集哈夫利奇科沃广场市集、第 57 集日什科夫修鞋摊、第 100 集查理大桥空桥，三段分别对应市集、手艺人和城市地标，时长都在 45 分钟以内。</p>
+        </details>
+        <details>
+          <summary>查理大桥空桥镜头到底是几点拍的？</summary>
+          <p>2026 年 11 月 6 日 6:12，太阳高度角约 4°，桥面行人 4 人。片尾参数卡记录气温 3.1℃、风向西北、28mm f/2.8、1/125 秒。</p>
+        </details>
+        <details>
+          <summary>第 57 集摊主摆摊年限为什么有两种说法？</summary>
+          <p>片头字幕写 23 年，来自摊主口述；市集管理处 2026 年 9 月摊位登记表写 2001 年起始。两者相差两年，未找到旁证，片尾已并列标注。</p>
+        </details>
+        <details>
+          <summary>雨天积水倒影在第几集，雨后多久拍最合适？</summary>
+          <p>第 88—94 集。实测雨后 30—50 分钟水面反射最完整，超过 90 分钟车辆带起泥点，倒影破碎。第 91 集片尾附了 7 个时间点的对照截图。</p>
+        </details>
+        <details>
+          <summary>地铁站台面孔段用了什么焦段？</summary>
+          <p>第 80—87 集共 8 段，其中 7 段使用 50mm 以上焦段，仅第 83 集有三处低于 50mm。低焦段画面更接近环境人像，但对被摄者打扰更大。</p>
+        </details>
+        <details>
+          <summary>在布拉格六区拍街头需要报备吗？</summary>
+          <p>手持拍摄行人一般无需报备；架设三脚架、补光灯或进行商业拍摄，需提前 48 小时向布拉格六区提交申请。查理大桥桥面禁止固定机位过夜。</p>
+        </details>
+        <details>
+          <summary>100 集里补拍重录的有多少？</summary>
+          <p>18 集，集中在第 88—100 集以及第 3、第 9、第 27、第 61 集。补拍原因多为光线偏差、环境声损坏或摊位位置变化，更新记录逐条列出。</p>
+        </details>
+        <details>
+          <summary>单集平均时长与总时长是？</summary>
+          <p>单集平均 42 分钟，100 集合计约 70 小时。最短为第 32 集 21 分钟，最长为第 66 集 58 分钟，含摊位编号对照表段落。</p>
+        </details>
+      </section>
+
+      <!-- 8 用户评论 -->
+      <section class="block" id="comments">
+        <div class="block-head"><h2>看过的人怎么说</h2><span class="hint">节选 6 条</span></div>
+        <div class="comments">
+          <article class="cmt">
+            <div class="who"><span class="avatar">M</span><b>Marta_布拉格</b><time datetime="2026-11-07">11月7日</time></div>
+            <p>第 57 集那个修鞋摊我常路过，摊主确实姓约瑟夫，但印象里他更早就开始摆了。片尾的两种说法处理得挺诚实。</p>
+            <span class="src">第57集</span>
+          </article>
+          <article class="cmt">
+            <div class="who"><span class="avatar a2">K</span><b>老K拍街</b><time datetime="2026-11-06">11月6日</time></div>
+            <p>6:12 那段的逆光确实漂亮，可我按图索骥 6:40 才到，桥上已经一百多号人，建议把到场时间再写早十分钟。</p>
+            <span class="src">第100集</span>
+          </article>
+          <article class="cmt">
+            <div class="who"><span class="avatar a3">L</span><b>Lída</b><time datetime="2026-11-05">11月5日</time></div>
+            <p>第 66 集摊位编号那段有点绕，我找了半天 C2-05 在哪儿，对照表要是能配张小图会好很多。</p>
+            <span class="src">第66集</span>
+          </article>
+          <article class="cmt">
+            <div class="who"><span class="avatar a4">Z</span><b>周末徒步的周</b><time datetime="2026-11-04">11月4日</time></div>
+            <p>雨天那 7 集连看下来很过瘾。第 91 集雨停后 40 分钟的水面倒影，确实比 20 分钟那版完整。这个结论站得住。</p>
+            <span class="src">第88—94集</span>
+          </article>
+          <article class="cmt">
+            <div class="who"><span class="avatar">H</span><b>汉斯在布尔诺</b><time datetime="2026-11-03">11月3日</time></div>
+            <p>说句实话，第 80—87 集地铁站台的脸拍得有点重复，焦段几乎一样，看三段之后印象就混了。倒是第 83 集那三处低焦段更活。</p>
+            <span class="src">第80—87集</span>
+          </article>
+          <article class="cmt">
+            <div class="who"><span class="avatar a2">T</span><b>田同学</b><time datetime="2026-11-02">11月2日</time></div>
+            <p>许可那一条很实用，上次在广场架三脚架被劝离，后来才知道要提前 48 小时报备。指南第 4 步写得比网上其他帖子清楚。</p>
+            <span class="src">体验指南</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- 9 相关资讯 -->
+      <section class="block" id="news">
+        <div class="block-head"><h2>相关资讯</h2><span class="hint">同城拍摄动态</span></div>
+        <ul class="news-list">
+          <li>
+            <time datetime="2026-11-06">11月6日</time>
+            <div><h3>布拉格六区调整广场商业拍摄报备窗口</h3><p>自 11 月起受理时间改为工作日 9:00—15:00，国庆假期前后暂停受理，已批件不受影响。</p></div>
+          </li>
+          <li>
+            <time datetime="2026-11-03">11月3日</time>
+            <div><h3>查理大桥东侧桥塔脚手架拆除完成</h3><p>10 月中旬起的维护围挡已撤，桥面东侧视野恢复，第 100 集拍摄时已无遮挡。</p></div>
+          </li>
+          <li>
+            <time datetime="2026-10-31">10月31日</time>
+            <div><h3>维诺赫拉迪市集区块编号系统启用</h3><p>摊位牌统一换为区块—序号格式，旧排号过渡期至 11 月底，第 66 集对照表据此制作。</p></div>
+          </li>
+          <li>
+            <time datetime="2026-10-26">10月26日</time>
+            <div><h3>布拉格地铁 B 线部分站台夜间施工</h3><p>安德尔站与卡尔林站晚间 22:30 后灯光调暗，站台面孔段的照度记录随之调整。</p></div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 10 相关推荐 -->
+      <section class="block" id="related">
+        <div class="block-head"><h2>相关推荐</h2><span class="hint">按关键词跳转</span></div>
+        <div class="tag-cloud">
+          <a href="/#picks">查理大桥清晨空桥拍摄</a>
+          <a href="/#guide">布拉格六区外景许可</a>
+          <a href="/#picks">日什科夫旧厂房区街拍</a>
+          <a href="/#deep">维诺赫拉迪市集摊位编号</a>
+          <a href="/#picks">哈夫利奇科沃广场周三市集</a>
+          <a href="/#deep">雨天积水倒影时间窗</a>
+          <a href="/#picks">布拉格地铁站台面孔焦段</a>
+          <a href="/#guide">聂鲁达街石阶坡道机位</a>
+          <a href="/#updates">第97集录音勘误</a>
+        </div>
+      </section>
+
+      <!-- 11 补充：榜单 -->
+      <section class="block" id="ranking">
+        <div class="block-head"><h2>可复刻度榜单</h2><span class="hint">按到访窗口稳定性打分</span></div>
+        <ol class="rank">
+          <li><span class="no">1</span><div><b>第45集 哈夫利奇科沃广场市集</b><span>每周三固定，光线与摊位常年稳定</span></div><span class="score">9.2</span></li>
+          <li><span class="no">2</span><div><b>第57集 日什科夫修鞋摊</b><span>工作日 9:00 前，摊主基本在</span></div><span class="score">8.7</span></li>
+          <li><span class="no">3</span><div><b>第80集 布拉格地铁站台面孔</b><span>晚高峰灯光恒定，但人流随机</span></div><span class="score">7.9</span></li>
+          <li><span class="no">4</span><div><b>第91集 雨天积水倒影</b><span>依赖天气，雨后时间窗窄</span></div><span class="score">6.4</span></li>
+          <li><span class="no">5</span><div><b>第100集 查理大桥空桥逆光</b><span>每年仅约两周窗口，需蹲点</span></div><span class="score">4.8</span></li>
+        </ol>
+      </section>
+
+    </div>
+
+    <!-- 侧栏 -->
+    <aside class="side-col" aria-label="辅助导航">
+      <div class="side-box">
+        <h2>栏内导航</h2>
+        <ul class="side-nav" id="sideNav">
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#picks">精选内容</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#channels">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">观感评论</a></li>
+          <li><a href="/#ranking">可复刻度榜单</a></li>
+        </ul>
+      </div>
+      <div class="side-box">
+        <h2>近期快照</h2>
+        <ul class="mini-list">
+          <li><time datetime="2026-11-06">11月6日</time>查理大桥东塔脚手架撤除</li>
+          <li><time datetime="2026-11-02">11月2日</time>六区报备窗口调整</li>
+          <li><time datetime="2026-10-31">10月31日</time>市集区块编号启用</li>
+        </ul>
+      </div>
+      <div class="side-box">
+        <h2>数据说明</h2>
+        <p class="side-note">集数与参数为示例整理，拍摄日期截至 2026-11-07。</p>
+        <p class="side-note">光线与气温数据来自拍摄当日记事，非气象台正式记录。</p>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">捷克街头1-100</div>
+        <p class="footer-note">以街区、时段与器材拆解的街头影像档案，供对照拍摄条件与观看顺序。</p>
+      </div>
+      <div>
+        <h3>内容入口</h3>
+        <ul>
+          <li><a href="/#picks">精选十集</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#ranking">可复刻度榜单</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>使用参考</h3>
+        <ul>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#updates">更新记录</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>互动</h3>
+        <ul>
+          <li><a href="/#comments">观感评论</a></li>
+          <li><a href="/#news">同城资讯</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>示例内容与数据说明：集数、时长、光线与摊位信息为整理示例，拍摄日期截至 2026-11-07。</span>
+      <span>© 2026 街头影像档案 · 页面内容可对照更新记录核对</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mainNav');
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.matchMedia('(max-width:720px)').matches){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 500){ toTop.classList.add('show'); }
+    else{ toTop.classList.remove('show'); }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* 滚动高亮侧栏 */
+  var links = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var targets = links.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  }).filter(Boolean);
+  if('IntersectionObserver' in window && targets.length){
+    var map = {};
+    links.forEach(function(a){
+      var id = a.getAttribute('href').replace('/#','');
+      var el = document.getElementById(id);
+      if(el){ map[id] = a; }
+    });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          links.forEach(function(a){ a.classList.remove('active'); });
+          var a = map[en.target.id];
+          if(a){ a.classList.add('active'); }
+        }
+      });
+    }, {rootMargin:'-120px 0px -60% 0px', threshold:0});
+    targets.forEach(function(t){ io.observe(t); });
+  }
+
+  /* 本地搜索 */
+  var input = document.getElementById('searchInput');
+  var feedback = document.getElementById('searchFeedback');
+  var blocks = Array.prototype.slice.call(document.querySelectorAll('main section.block, main .ov-card, main .feature-card, main .update-list li, main .steps li, main .cmt, main .news-list li, main details, main .rank li, main .tag-cloud a, main .chip-index a'));
+  function clearMarks(){
+    blocks.forEach(function(b){ delete b.dataset.hit; });
+  }
+  function doSearch(){
+    var q = (input.value || '').trim();
+    clearMarks();
+    if(!q){
+      feedback.textContent = '';
+      return;
+    }
+    var hits = 0;
+    blocks.forEach(function(b){
+      if(b.textContent.toLowerCase().indexOf(q.toLowerCase()) !== -1){
+        b.dataset.hit = '1';
+        if(hits === 0){
+          b.scrollIntoView({behavior:'smooth', block:'center'});
+        }
+        hits++;
+      }
+    });
+    feedback.textContent = hits > 0
+      ? '找到 ' + hits + ' 处包含“' + q + '”的条目，已定位到第一处。'
+      : '没有找到包含“' + q + '”的内容，可换用集数、街区名或器材型号再试。';
+  }
+  var timer = null;
+  input.addEventListener('input', function(){
+    clearTimeout(timer);
+    timer = setTimeout(doSearch, 220);
+  });
+  input.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"捷克街头1-100",
+  "description":"布拉格街头影像档案，收录100集拍摄清单、片区路线、器材参数与观看节奏。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"哪几集适合第一次看这套街头影像？","acceptedAnswer":{"@type":"Answer","text":"第45集哈夫利奇科沃广场市集、第57集日什科夫修鞋摊、第100集查理大桥空桥，分别对应市集、手艺人和城市地标。"}},
+    {"@type":"Question","name":"查理大桥空桥镜头到底是几点拍的？","acceptedAnswer":{"@type":"Answer","text":"2026年11月6日6:12，太阳高度角约4°，桥面行人4人，气温3.1℃，28mm f/2.8。"}},
+    {"@type":"Question","name":"第57集摊主摆摊年限为什么有两种说法？","acceptedAnswer":{"@type":"Answer","text":"片头字幕写23年，来自摊主口述；市集管理处2026年9月摊位登记表写2001年起始，两者相差两年，片尾已并列标注。"}},
+    {"@type":"Question","name":"雨天积水倒影在第几集，雨后多久拍最合适？","acceptedAnswer":{"@type":"Answer","text":"第88—94集。雨后30—50分钟水面反射最完整，超过90分钟车辆带起泥点，倒影破碎。"}},
+    {"@type":"Question","name":"地铁站台面孔段用了什么焦段？","acceptedAnswer":{"@type":"Answer","text":"第80—87集共8段，其中7段使用50mm以上焦段，仅第83集有三处低于50mm。"}},
+    {"@type":"Question","name":"在布拉格六区拍街头需要报备吗？","acceptedAnswer":{"@type":"Answer","text":"手持拍摄行人一般无需报备；架设三脚架、补光灯或商业拍摄，需提前48小时向布拉格六区提交申请。"}},
+    {"@type":"Question","name":"100集里补拍重录的有多少？","acceptedAnswer":{"@type":"Answer","text":"18集，集中在第88—100集及第3、第9、第27、第61集，原因多为光线偏差、环境声损坏或摊位位置变化。"}},
+    {"@type":"Question","name":"单集平均时长与总时长是？","acceptedAnswer":{"@type":"Answer","text":"单集平均42分钟，100集合计约70小时，最短第32集21分钟，最长第66集58分钟。"}}
+  ]
+}
+</script>
+</body>
+  </html>
