@@ -1,0 +1,1180 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>挠痒痒网站 vk-视频合集与体验指南</title>
+<meta name="description" content="挠痒痒网站 vk 汇集挠痒痒视频合集、角色扮演体验与创作指南，按情境、强度、语言分区整理，附判断标准、常见问题与评论记录，方便按需检索。">
+<meta name="keywords" content="挠痒痒网站 vk">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e2576b'/%3E%3Cpath d='M20 24c4-6 10-6 12 0s8 6 12 0M20 40c4-6 10-6 12 0s8 6 12 0' stroke='%23fff' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#221a1c;
+  --ink-soft:#54454a;
+  --muted:#7d6c71;
+  --line:#e7dade;
+  --line-strong:#d8c3c9;
+  --bg:#fdf8f8;
+  --paper:#ffffff;
+  --tint:#fbeef0;
+  --tint-2:#f6e2e6;
+  --main:#c8364f;
+  --main-deep:#9e2338;
+  --accent:#2f6b5f;
+  --accent-soft:#e5f0ec;
+  --warn:#8a5a12;
+  --warn-soft:#fbf1dc;
+  --radius-s:6px;
+  --radius:10px;
+  --radius-l:16px;
+  --shadow:0 1px 2px rgba(60,20,30,.06),0 6px 18px rgba(60,20,30,.06);
+  --shadow-hover:0 2px 4px rgba(60,20,30,.08),0 10px 26px rgba(60,20,30,.10);
+  --gap:16px;
+  --fs-h1:clamp(28px,4vw,42px);
+  --fs-h2:clamp(20px,2.4vw,25px);
+  --fs-h3:17px;
+  --fs-body:16px;
+  --fs-s:14px;
+  --fs-xs:12.5px;
+  --ann-h:38px;
+  --head-h:62px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--font);background:var(--bg);color:var(--ink);
+  font-size:var(--fs-body);line-height:1.75;
+}
+img{max-width:100%;display:block}
+a{color:var(--main-deep);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:20px}
+li{margin-bottom:6px}
+:focus-visible{outline:3px solid var(--main);outline-offset:2px;border-radius:4px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+section[id]{scroll-margin-top:calc(var(--ann-h) + var(--head-h) + 12px)}
+
+/* ---------- 吸顶公告条 ---------- */
+.annbar{
+  position:sticky;top:0;z-index:60;
+  background:var(--main-deep);color:#fff;font-size:var(--fs-xs);
+  min-height:var(--ann-h);display:flex;align-items:center;
+}
+.annbar .wrap{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
+.annbar b{background:rgba(255,255,255,.18);padding:1px 8px;border-radius:999px;font-weight:600;letter-spacing:.02em}
+.annbar a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+.annbar time{opacity:.85}
+
+/* ---------- 页头 ---------- */
+.sitehead{
+  position:sticky;top:var(--ann-h);z-index:50;
+  background:rgba(253,248,248,.96);backdrop-filter:saturate(1.2) blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.sitehead .wrap{display:flex;align-items:center;gap:18px;min-height:var(--head-h)}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand svg{width:34px;height:34px;flex:0 0 auto}
+.brand-text{font-weight:700;font-size:16px;letter-spacing:.01em;color:var(--ink);white-space:nowrap}
+.navmain{display:flex;gap:4px;flex-wrap:wrap;margin-left:6px}
+.navmain a{
+  padding:6px 10px;border-radius:var(--radius-s);color:var(--ink-soft);
+  font-size:var(--fs-s);white-space:nowrap;
+}
+.navmain a:hover{background:var(--tint);color:var(--main-deep);text-decoration:none}
+.head-tools{display:flex;align-items:center;gap:8px;margin-left:auto}
+.search{position:relative}
+.search input{
+  font:inherit;font-size:var(--fs-s);padding:7px 12px;width:190px;
+  border:1px solid var(--line-strong);border-radius:999px;background:#fff;color:var(--ink);
+}
+.search input::placeholder{color:var(--muted)}
+.search-fb{
+  position:absolute;top:calc(100% + 6px);right:0;width:280px;background:#fff;
+  border:1px solid var(--line-strong);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:10px 12px;font-size:var(--fs-xs);color:var(--ink-soft);display:none;
+}
+.search-fb.show{display:block}
+.search-fb strong{color:var(--main-deep)}
+.menu-btn{
+  display:none;font:inherit;font-size:var(--fs-s);background:#fff;color:var(--ink);
+  border:1px solid var(--line-strong);border-radius:999px;padding:7px 12px;cursor:pointer;
+}
+.menu-btn:hover{background:var(--tint)}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#fbeef0 0%,#fdf8f8 58%,#eef4f1 100%);
+  border-bottom:1px solid var(--line);
+}
+.hero .wrap{
+  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+  gap:36px;align-items:center;padding-top:46px;padding-bottom:46px;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line-strong);
+  border-radius:999px;padding:4px 12px;font-size:var(--fs-xs);color:var(--main-deep);font-weight:600;
+  margin-bottom:14px;
+}
+.hero-tag i{width:7px;height:7px;border-radius:50%;background:var(--main);display:inline-block}
+.hero h1{font-size:var(--fs-h1);letter-spacing:-.01em;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--main-deep)}
+.hero-lede{font-size:16.5px;color:var(--ink-soft);max-width:52ch;margin-bottom:18px}
+.hero-facts{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.fact{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:8px 14px;box-shadow:var(--shadow);min-width:110px;
+}
+.fact b{display:block;font-size:20px;color:var(--main-deep);line-height:1.2}
+.fact span{font-size:var(--fs-xs);color:var(--muted)}
+.hero-cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{
+  display:inline-block;font:inherit;font-size:var(--fs-s);font-weight:600;cursor:pointer;
+  padding:10px 20px;border-radius:999px;border:1px solid transparent;transition:transform .15s,box-shadow .15s;
+}
+.btn-primary{background:var(--main);color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{background:var(--main-deep);text-decoration:none;transform:translateY(-2px);box-shadow:var(--shadow-hover)}
+.btn-ghost{background:#fff;color:var(--main-deep);border-color:var(--line-strong)}
+.btn-ghost:hover{background:var(--tint);text-decoration:none;transform:translateY(-2px)}
+.hero-art{position:relative;aspect-ratio:1/0.86;max-height:420px}
+.hero-art svg{width:100%;height:100%;display:block}
+
+/* ---------- 主布局：双栏标准 ---------- */
+.layout{
+  display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:34px;
+  padding-top:34px;padding-bottom:44px;align-items:start;
+}
+.maincol{min-width:0}
+.sidecol{min-width:0;position:sticky;top:calc(var(--ann-h) + var(--head-h) + 16px)}
+
+/* ---------- 通用板块 ---------- */
+.panel{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-l);
+  padding:24px 26px;margin-bottom:24px;box-shadow:var(--shadow);
+}
+.panel-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.panel-head h2{font-size:var(--fs-h2)}
+.panel-head .hint{font-size:var(--fs-xs);color:var(--muted)}
+.panel-sub{font-size:var(--fs-s);color:var(--ink-soft);margin:0 0 16px}
+.eyebrow{font-size:var(--fs-xs);letter-spacing:.12em;color:var(--main);font-weight:700;text-transform:uppercase}
+.panel h3{font-size:var(--fs-h3);margin:18px 0 8px}
+.panel h3:first-child{margin-top:0}
+
+/* ---------- 领域概览：三栏类型卡 ---------- */
+.overview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:14px}
+.ov-card{border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;background:linear-gradient(180deg,#fff, #fdf7f8)}
+.ov-card h3{font-size:15px;margin:0 0 6px}
+.ov-card p{font-size:var(--fs-s);color:var(--ink-soft);margin:0 0 8px}
+.ov-card .meta{font-size:var(--fs-xs);color:var(--muted)}
+.chiprow{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.chip{
+  display:inline-block;font-size:var(--fs-xs);padding:4px 11px;border-radius:999px;
+  background:var(--tint);color:var(--main-deep);border:1px solid var(--tint-2);font-weight:500;
+}
+.chip.alt{background:var(--accent-soft);color:var(--accent);border-color:#cfe3dc}
+.chip.neutral{background:#f2eef0;color:var(--ink-soft);border-color:var(--line)}
+
+/* ---------- 精选：网格卡片 ---------- */
+.card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
+.vcard{
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;
+  display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s;
+}
+.vcard:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.vcard .thumb{aspect-ratio:16/9;overflow:hidden;background:var(--tint)}
+.vcard .thumb img{width:100%;height:100%;object-fit:cover}
+.vcard .body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.vcard h3{font-size:15px;margin:0}
+.vcard p{font-size:var(--fs-s);color:var(--ink-soft);margin:0}
+.vcard .foot{margin-top:auto;display:flex;align-items:center;gap:8px;font-size:var(--fs-xs);color:var(--muted)}
+.tag-mini{font-size:11.5px;background:var(--tint);color:var(--main-deep);padding:1px 8px;border-radius:999px}
+
+/* ---------- 最新更新：紧凑列表 + 时间线 ---------- */
+.timeline{list-style:none;padding:0;margin:14px 0 0;border-left:2px solid var(--line-strong);margin-left:6px}
+.timeline li{position:relative;padding:0 0 18px 20px;margin:0}
+.timeline li::before{
+  content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;
+  background:#fff;border:2px solid var(--main);
+}
+.timeline li:last-child{padding-bottom:0}
+.tl-time{font-size:var(--fs-xs);color:var(--main-deep);font-weight:600}
+.tl-title{font-size:15px;font-weight:600;margin:2px 0 2px}
+.tl-desc{font-size:var(--fs-s);color:var(--ink-soft);margin:0}
+
+/* ---------- 分类入口：标签索引 ---------- */
+.index-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+.index-item{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  border:1px solid var(--line);border-radius:var(--radius);padding:11px 14px;background:#fff;
+  transition:background .15s,border-color .15s;
+}
+.index-item:hover{background:var(--tint);border-color:var(--line-strong);text-decoration:none}
+.index-item .name{font-size:14.5px;font-weight:600;color:var(--ink)}
+.index-item .cnt{font-size:var(--fs-xs);color:var(--muted);white-space:nowrap}
+
+/* ---------- 深度解析：分栏正文 ---------- */
+.deepead{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-l);padding:26px;margin-bottom:24px;box-shadow:var(--shadow)}
+.deepead .lead{font-size:16.5px;color:var(--ink);border-left:3px solid var(--main);padding-left:14px;margin-bottom:18px}
+.deepead h3{font-size:var(--fs-h3);margin:22px 0 8px;color:var(--main-deep)}
+.data-table{width:100%;border-collapse:collapse;font-size:var(--fs-s);margin:12px 0 16px}
+.data-table caption{text-align:left;font-size:var(--fs-xs);color:var(--muted);padding-bottom:6px}
+.data-table th,.data-table td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.data-table th{background:var(--tint);font-weight:600;color:var(--main-deep);white-space:nowrap}
+.data-table td.num{font-variant-numeric:tabular-nums}
+.claim-box{
+  border:1px solid var(--line-strong);background:var(--warn-soft);border-radius:var(--radius);
+  padding:12px 16px;margin:14px 0;font-size:var(--fs-s);
+}
+.claim-box b{color:var(--warn)}
+.quote-card{
+  border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 var(--radius) var(--radius) 0;
+  padding:12px 16px;font-size:var(--fs-s);color:#2a4f46;margin:14px 0;
+}
+.quote-card cite{display:block;margin-top:6px;font-style:normal;font-size:var(--fs-xs);color:#4b7268}
+
+/* ---------- 体验指南：编号步骤 ---------- */
+.steps{list-style:none;counter-reset:s;padding:0;margin:16px 0 0}
+.steps li{
+  counter-increment:s;position:relative;padding:0 0 16px 46px;margin:0;
+}
+.steps li::before{
+  content:counter(s);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;
+  background:var(--main);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;
+}
+.steps li b{display:block;font-size:15px;margin-bottom:2px}
+.steps li p{font-size:var(--fs-s);color:var(--ink-soft);margin:0}
+
+/* ---------- 对照面板 ---------- */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line-strong);border-radius:var(--radius);overflow:hidden;margin-top:16px}
+.compare > div{padding:14px 16px}
+.compare .col-a{background:#fff;border-right:1px solid var(--line)}
+.compare .col-b{background:var(--tint)}
+.compare h3{font-size:14.5px;margin:0 0 8px;color:var(--main-deep)}
+.compare ul{font-size:var(--fs-s);color:var(--ink-soft);margin:0;padding-left:18px}
+
+/* ---------- FAQ ---------- */
+.faq-list{margin-top:14px;border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+details summary{
+  cursor:pointer;padding:13px 30px 13px 4px;font-size:15px;font-weight:600;list-style:none;position:relative;
+}
+details summary::-webkit-details-marker{display:none}
+details summary::after{
+  content:"+";position:absolute;right:6px;top:11px;font-size:18px;color:var(--main);font-weight:400;line-height:1;
+}
+details[open] summary::after{content:"–"}
+details .ans{padding:0 4px 14px;font-size:var(--fs-s);color:var(--ink-soft)}
+details .ans p:last-child{margin-bottom:0}
+
+/* ---------- 评论 ---------- */
+.cmt-list{margin-top:14px;display:grid;gap:12px}
+.cmt{border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;background:#fff}
+.cmt-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:var(--fs-xs);color:var(--muted);margin-bottom:6px}
+.cmt-name{font-weight:700;color:var(--ink);font-size:13.5px}
+.cmt-body{font-size:var(--fs-s);color:var(--ink-soft);margin:0}
+.cmt-ref{font-size:var(--fs-xs);color:var(--main-deep);background:var(--tint);border-radius:4px;padding:1px 7px}
+.star{color:#d9a441;letter-spacing:1px}
+
+/* ---------- 资讯：摘要列表 ---------- */
+.news-list{margin-top:14px;display:grid;gap:14px}
+.news-item{display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;align-items:start}
+.news-item .date{
+  font-size:var(--fs-xs);color:var(--main-deep);background:var(--tint);border-radius:var(--radius-s);
+  padding:6px 4px;text-align:center;font-weight:600;line-height:1.4;
+}
+.news-item h3{font-size:15px;margin:0 0 3px}
+.news-item p{font-size:var(--fs-s);color:var(--ink-soft);margin:0}
+
+/* ---------- 推荐标签 ---------- */
+.reco{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+.reco a{
+  font-size:var(--fs-s);padding:6px 13px;border-radius:999px;border:1px solid var(--line-strong);
+  background:#fff;color:var(--ink-soft);
+}
+.reco a:hover{background:var(--tint);color:var(--main-deep);border-color:var(--main);text-decoration:none}
+
+/* ---------- 榜单 ---------- */
+.rank-list{list-style:none;padding:0;margin:14px 0 0;counter-reset:r}
+.rank-list li{
+  counter-increment:r;display:grid;grid-template-columns:30px minmax(0,1fr) auto;gap:10px;
+  align-items:baseline;padding:10px 0;border-bottom:1px dashed var(--line);margin:0;
+}
+.rank-list li:last-child{border-bottom:none}
+.rank-list li::before{content:counter(r);color:var(--main);font-weight:700;font-size:14px}
+.rank-list .rk-name{font-size:14.5px;font-weight:600}
+.rank-list .rk-note{font-size:var(--fs-xs);color:var(--muted)}
+.rank-list .rk-val{font-size:var(--fs-xs);color:var(--main-deep);font-weight:600;white-space:nowrap}
+
+/* ---------- 侧栏 ---------- */
+.side-box{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-l);
+  padding:18px 18px 16px;margin-bottom:18px;box-shadow:var(--shadow);
+}
+.side-box h2,.side-box h3{font-size:15px;margin-bottom:10px}
+.side-nav{list-style:none;padding:0;margin:0;border-left:2px solid var(--line)}
+.side-nav li{margin:0}
+.side-nav a{
+  display:block;font-size:13.5px;padding:7px 0 7px 12px;color:var(--ink-soft);
+  border-left:2px solid transparent;margin-left:-2px;
+}
+.side-nav a:hover{color:var(--main-deep);text-decoration:none;background:var(--tint)}
+.side-nav a.active{color:var(--main-deep);font-weight:700;border-left-color:var(--main);background:var(--tint)}
+.side-news{list-style:none;padding:0;margin:0}
+.side-news li{display:flex;gap:8px;font-size:var(--fs-xs);color:var(--ink-soft);padding:7px 0;border-bottom:1px dashed var(--line);margin:0}
+.side-news li:last-child{border-bottom:none}
+.side-news time{color:var(--muted);white-space:nowrap;flex:0 0 auto}
+.side-note{font-size:var(--fs-xs);color:var(--muted);margin:10px 0 0;line-height:1.65}
+
+/* ---------- 回到顶部 ---------- */
+#toTop{
+  position:fixed;right:18px;bottom:20px;z-index:70;display:none;
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--line-strong);
+  background:#fff;color:var(--main-deep);font:inherit;font-size:12px;font-weight:700;cursor:pointer;
+  box-shadow:var(--shadow);line-height:1.1;
+}
+#toTop.show{display:block}
+#toTop:hover{background:var(--tint)}
+
+/* ---------- 页尾 ---------- */
+.sitefoot{background:#2b2023;color:#e9dee1;margin-top:8px;font-size:var(--fs-s)}
+.sitefoot .wrap{padding-top:38px;padding-bottom:24px}
+.foot-top{display:grid;grid-template-columns:1.3fr 2fr;gap:30px;padding-bottom:24px;border-bottom:1px solid #463a3e}
+.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.foot-brand svg{width:30px;height:30px}
+.foot-brand strong{font-size:16px;color:#fff}
+.foot-pos{color:#c9b8bd;font-size:var(--fs-s);max-width:34ch}
+.foot-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.foot-cols h3{font-size:13.5px;color:#fff;margin:0 0 8px}
+.foot-cols ul{list-style:none;padding:0;margin:0}
+.foot-cols li{margin-bottom:5px}
+.foot-cols a{color:#c9b8bd;font-size:var(--fs-xs)}
+.foot-cols a:hover{color:#fff}
+.foot-bottom{padding-top:16px;color:#a9969c;font-size:var(--fs-xs);display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between}
+.foot-bottom p{margin:0}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1000px){
+  .layout{grid-template-columns:minmax(0,1fr) 264px;gap:24px}
+  .hero .wrap{gap:24px}
+  .overview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:860px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .sidecol{position:static;margin-top:0}
+  .hero .wrap{grid-template-columns:minmax(0,1fr);padding-top:34px;padding-bottom:34px}
+  .hero-art{order:-1;max-height:300px;aspect-ratio:16/9}
+  .menu-btn{display:inline-block}
+  .navmain{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:#fff;border-bottom:1px solid var(--line-strong);padding:10px 20px 14px;
+    box-shadow:var(--shadow);gap:2px;
+  }
+  .navmain.open{display:flex;flex-direction:column}
+  .navmain a{padding:9px 10px;border-radius:var(--radius-s);font-size:15px}
+  .sitehead .wrap{position:relative;flex-wrap:wrap;gap:10px}
+  .head-tools{margin-left:auto}
+  .search input{width:140px}
+  .search-fb{width:240px;right:-40px}
+}
+@media (max-width:620px){
+  .wrap{padding:0 14px}
+  .panel,.deepead{padding:18px 16px;border-radius:var(--radius)}
+  .card-grid{grid-template-columns:minmax(0,1fr)}
+  .overview-grid{grid-template-columns:minmax(0,1fr)}
+  .index-grid{grid-template-columns:minmax(0,1fr)}
+  .compare{grid-template-columns:minmax(0,1fr)}
+  .compare .col-a{border-right:none;border-bottom:1px solid var(--line)}
+  .news-item{grid-template-columns:minmax(0,1fr)}
+  .news-item .date{width:fit-content;padding:3px 10px;text-align:left}
+  .foot-top{grid-template-columns:minmax(0,1fr)}
+  .foot-cols{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero-facts{gap:8px}
+  .fact{flex:1 1 calc(50% - 8px);min-width:0}
+  .search input{width:112px}
+  #toTop{right:12px;bottom:14px}
+  .annbar .wrap{gap:6px;font-size:11.5px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .vcard:hover,.btn:hover{transform:none!important}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="annbar" role="region" aria-label="站内公告">
+  <div class="wrap">
+    <b>挠痒痒网站 vk</b>
+    <span>11 月 6 日上线「角色扮演强度分级 v3」，同步替换 14 条旧条目描述。</span>
+    <time datetime="2026-11-08">更新于 2026-11-08</time>
+    <a href="/#latest">查看变更</a>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="sitehead">
+  <div class="wrap">
+    <a class="brand" href="/#top" aria-label="挠痒痒网站 vk 首页">
+      <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <rect width="64" height="64" rx="15" fill="#c8364f"/>
+        <path d="M18 24c4-7 11-7 14 0s10 7 14 0" stroke="#fff" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+        <path d="M18 42c4-7 11-7 14 0s10 7 14 0" stroke="#f6c9d0" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">挠痒痒网站 vk</span>
+    </a>
+    <nav class="navmain" id="navmain" aria-label="主题导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#picks">精选合集</a>
+      <a href="/#latest">最新更新</a>
+      <a href="/#cats">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问题</a>
+    </nav>
+    <div class="head-tools">
+      <div class="search">
+        <label class="sr-only" for="q">站内搜索</label>
+        <input id="q" type="search" placeholder="搜条目 / 情境 / 强度" autocomplete="off">
+        <div class="search-fb" id="searchFb" role="status" aria-live="polite"></div>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navmain">菜单</button>
+    </div>
+  </div>
+</header>
+
+<!-- 主题首屏 -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="hero-tag"><i></i>情境 · 强度 · 语言 三维筛条目</span>
+      <h1>挠痒痒网站 <em>vk</em> 视频合集与体验指南</h1>
+      <p class="hero-lede">把散落在短视频、直播回放与角色扮演片段里的挠痒内容按情境归类：办公室、教室、居家、体检室四类布景，轻触、固定、倒计时三种强度，中文与无声两类版本。每条都标注原发布时间、时长和是否含台词，方便对照检索。</p>
+      <div class="hero-facts">
+        <div class="fact"><b>1,286</b><span>已归档条目</span></div>
+        <div class="fact"><b>9</b><span>主题频道</span></div>
+        <div class="fact"><b>11-06</b><span>最近规则修订</span></div>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="/#picks">看本周精选 6 条</a>
+        <a class="btn btn-ghost" href="/#guide">按强度筛选步骤</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 520 440" role="img">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#fbeef0"/><stop offset="1" stop-color="#eef4f1"/>
+          </linearGradient>
+          <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#c8364f"/><stop offset="1" stop-color="#9e2338"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="520" height="440" rx="22" fill="url(#g1)"/>
+        <circle cx="402" cy="96" r="62" fill="#f6e2e6"/>
+        <circle cx="118" cy="352" r="48" fill="#e5f0ec"/>
+        <g transform="translate(96 108)">
+          <rect x="0" y="0" width="216" height="150" rx="14" fill="#fff" stroke="#d8c3c9"/>
+          <rect x="14" y="16" width="120" height="9" rx="4.5" fill="#e7dade"/>
+          <rect x="14" y="34" width="86" height="9" rx="4.5" fill="#e7dade"/>
+          <path d="M18 84c14-22 30-22 44 0s30 22 44 0 30-22 44 0" stroke="#c8364f" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M18 116c14-22 30-22 44 0s30 22 44 0 30-22 44 0" stroke="#f0b9c2" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(296 176)">
+          <rect x="0" y="0" width="140" height="168" rx="14" fill="#fff" stroke="#d8c3c9"/>
+          <rect x="16" y="18" width="72" height="10" rx="5" fill="#c8364f" opacity=".7"/>
+          <rect x="16" y="40" width="104" height="8" rx="4" fill="#e7dade"/>
+          <rect x="16" y="56" width="90" height="8" rx="4" fill="#e7dade"/>
+          <rect x="16" y="72" width="100" height="8" rx="4" fill="#e7dade"/>
+          <rect x="16" y="98" width="108" height="48" rx="8" fill="#fbeef0"/>
+          <circle cx="42" cy="122" r="9" fill="#c8364f" opacity=".8"/>
+          <rect x="60" y="116" width="50" height="7" rx="3.5" fill="#d8c3c9"/>
+          <rect x="60" y="128" width="34" height="7" rx="3.5" fill="#e7dade"/>
+        </g>
+        <g transform="translate(58 268)">
+          <rect x="0" y="0" width="164" height="68" rx="12" fill="url(#g2)"/>
+          <rect x="16" y="18" width="86" height="8" rx="4" fill="#fff" opacity=".85"/>
+          <rect x="16" y="34" width="60" height="8" rx="4" fill="#fff" opacity=".55"/>
+        </g>
+        <g stroke="#c8364f" stroke-width="3" fill="none" stroke-linecap="round" opacity=".55">
+          <path d="M344 74c10-8 20-8 30 0"/>
+          <path d="M352 92c8-6 16-6 24 0"/>
+          <path d="M62 84c8-6 16-6 24 0"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="wrap layout">
+  <!-- 主内容列 -->
+  <main class="maincol">
+
+    <!-- 1 领域概览 -->
+    <section class="panel" id="overview">
+      <div class="panel-head">
+        <span class="eyebrow">Domain</span>
+        <h2>领域概览：四类布景与三种强度</h2>
+      </div>
+      <p class="panel-sub">挠痒内容的分野不在题材大小，而在布景与强度的组合方式。布景决定观众代入的角色，强度决定接受门槛，两者交叉后才出现稳定的检索需求。</p>
+      <div class="overview-grid">
+        <div class="ov-card">
+          <h3>办公室布景</h3>
+          <p>工位、转椅、卷袖口是固定道具。多数片段时长 90 秒到 3 分钟，台词以同事间短句为主。</p>
+          <span class="meta">归档 312 条 · 中文占 78%</span>
+        </div>
+        <div class="ov-card">
+          <h3>教室布景</h3>
+          <p>课桌、粉笔、校服三件套，强度普遍偏轻。无声版本比例明显高于其他布景。</p>
+          <span class="meta">归档 268 条 · 无声版 41%</span>
+        </div>
+        <div class="ov-card">
+          <h3>居家布景</h3>
+          <p>沙发、毛毯、拖鞋出场率高，光线偏暖。台词松散，靠环境音支撑节奏。</p>
+          <span class="meta">归档 401 条 · 平均 2 分 40 秒</span>
+        </div>
+        <div class="ov-card">
+          <h3>体检室布景</h3>
+          <p>白墙、诊床、器械托盘。强调流程感，倒计时与固定段落出现频率最高。</p>
+          <span class="meta">归档 187 条 · 含固定段落 63%</span>
+        </div>
+        <div class="ov-card">
+          <h3>轻触强度</h3>
+          <p>指尖、羽毛、棉签三类接触物，停留时间短。适合初次接触该题材的观众。</p>
+          <span class="meta">占全库 46%</span>
+        </div>
+        <div class="ov-card">
+          <h3>固定与倒计时强度</h3>
+          <p>含手腕固定、计时器读秒。信息密度高，但需要更明确的场景提示与分级标注。</p>
+          <span class="meta">占全库 21%</span>
+        </div>
+      </div>
+      <div class="chiprow">
+        <span class="chip">办公室挠痒视频</span>
+        <span class="chip">教室轻触片段</span>
+        <span class="chip alt">无声版挠痒合集</span>
+        <span class="chip alt">倒计时强度分级</span>
+        <span class="chip neutral">居家布景</span>
+        <span class="chip neutral">体检室流程</span>
+      </div>
+    </section>
+
+    <!-- 2 精选内容推荐 -->
+    <section class="panel" id="picks">
+      <div class="panel-head">
+        <span class="eyebrow">Picks</span>
+        <h2>精选内容推荐：本周检索量最高的 6 条</h2>
+      </div>
+      <p class="panel-sub">按站内搜索词排序，不看播放量。每条注明布景、强度和台词语言。</p>
+      <div class="card-grid">
+        <article class="vcard">
+          <div class="thumb"><img src="https://picsum.photos/seed/tickle-office1/640/360" width="640" height="360" loading="lazy" alt="办公室布景中角色坐转椅抬手示意开始"></div>
+          <div class="body">
+            <h3>办公室转椅倒计时 60 秒</h3>
+            <p>全程单机位，计时器放在桌面右侧，读秒声清晰可辨。</p>
+            <div class="foot"><span class="tag-mini">办公室</span><span class="tag-mini">倒计时</span><span>3 分 10 秒</span></div>
+          </div>
+        </article>
+        <article class="vcard">
+          <div class="thumb"><img src="https://picsum.photos/seed/tickle-class2/640/360" width="640" height="360" loading="lazy" alt="教室课桌旁两人相对而坐的轻触片段场面"></div>
+          <div class="body">
+            <h3>教室课桌轻触 · 无台词版</h3>
+            <p>只有粉笔摩擦与环境音，适合需要安静背景的场景。</p>
+            <div class="foot"><span class="tag-mini">教室</span><span class="tag-mini">无声</span><span>1 分 48 秒</span></div>
+          </div>
+        </article>
+        <article class="vcard">
+          <div class="thumb"><img src="https://picsum.photos/seed/tickle-home3/640/360" width="640" height="360" loading="lazy" alt="居家沙发上毛毯与拖鞋的暖光拍摄现场"></div>
+          <div class="body">
+            <h3>居家毛毯场景 双人互动</h3>
+            <p>镜头移动少，靠对话推进；末尾有 20 秒静默收尾。</p>
+            <div class="foot"><span class="tag-mini">居家</span><span class="tag-mini">双人</span><span>2 分 36 秒</span></div>
+          </div>
+        </article>
+        <article class="vcard">
+          <div class="thumb"><img src="https://picsum.photos/seed/tickle-clinic4/640/360" width="640" height="360" loading="lazy" alt="体检室白墙诊床与器械托盘的流程化布景"></div>
+          <div class="body">
+            <h3>体检室流程演示 三段式</h3>
+            <p>按问诊、检查、记录三段推进，固定段落占 41 秒。</p>
+            <div class="foot"><span class="tag-mini">体检室</span><span class="tag-mini">固定</span><span>4 分 02 秒</span></div>
+          </div>
+        </article>
+        <article class="vcard">
+          <div class="thumb"><img src="https://picsum.photos/seed/tickle-feather5/640/360" width="640" height="360" loading="lazy" alt="羽毛与棉签并排放在木桌上的特写道具"></div>
+          <div class="body">
+            <h3>羽毛与棉签对比测试</h3>
+            <p>同一角色、同一布景，只换接触物，便于判断强度差异。</p>
+            <div class="foot"><span class="tag-mini">轻触</span><span class="tag-mini">对照</span><span>2 分 12 秒</span></div>
+          </div>
+        </article>
+        <article class="vcard">
+          <div class="thumb"><img src="https://picsum.photos/seed/tickle-night6/640/360" width="640" height="360" loading="lazy" alt="夜间台灯下桌面局部录制的暖色画面"></div>
+          <div class="body">
+            <h3>夜间桌面局部录制 第一视角</h3>
+            <p>固定机位俯拍，画面只到手腕以上，信息集中在手部动作。</p>
+            <div class="foot"><span class="tag-mini">第一视角</span><span class="tag-mini">夜间</span><span>1 分 30 秒</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3 最新更新 -->
+    <section class="panel" id="latest">
+      <div class="panel-head">
+        <span class="eyebrow">Updates</span>
+        <h2>最新更新：11 月 2 日至 11 月 7 日条目变动</h2>
+      </div>
+      <p class="panel-sub">只记录条目新增、描述改写与分级调整，不重复精选里的推荐理由。</p>
+      <ol class="timeline">
+        <li>
+          <span class="tl-time">11 月 7 日</span>
+          <div class="tl-title">新增「教室后排无声片段」9 条</div>
+          <p class="tl-desc">其中 6 条原发布于 10 月 18 日，属补档；3 条为 11 月 5 日新录。全部标为轻触强度。</p>
+        </li>
+        <li>
+          <span class="tl-time">11 月 6 日</span>
+          <div class="tl-title">强度分级 v3 生效</div>
+          <p class="tl-desc">把原来的「中强度」拆成「固定」与「倒计时」两档，同时给 14 条旧条目补写接触物说明。</p>
+        </li>
+        <li>
+          <span class="tl-time">11 月 4 日</span>
+          <div class="tl-title">体检室布景条目补齐时长字段</div>
+          <p class="tl-desc">此前有 23 条缺时长，现全部回填；最长 6 分 18 秒，最短 52 秒。</p>
+        </li>
+        <li>
+          <span class="tl-time">11 月 3 日</span>
+          <div class="tl-title">撤下 2 条无来源转载</div>
+          <p class="tl-desc">原发布账号已注销，无法核对原始语境，暂不重新上架。</p>
+        </li>
+        <li>
+          <span class="tl-time">11 月 2 日</span>
+          <div class="tl-title">评论区新增「条目指向」标记</div>
+          <p class="tl-desc">评论若指向具体条目，可在正文上方显示条目编号，方便对照。</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="panel" id="cats">
+      <div class="panel-head">
+        <span class="eyebrow">Index</span>
+        <h2>分类入口：按布景、强度、语言检索</h2>
+      </div>
+      <p class="panel-sub">数字为当前有效条目数，不含已撤下与待核对内容。</p>
+      <div class="index-grid">
+        <a class="index-item" href="/#picks"><span class="name">办公室挠痒视频</span><span class="cnt">312 条</span></a>
+        <a class="index-item" href="/#picks"><span class="name">教室轻触片段</span><span class="cnt">268 条</span></a>
+        <a class="index-item" href="/#picks"><span class="name">居家布景合集</span><span class="cnt">401 条</span></a>
+        <a class="index-item" href="/#picks"><span class="name">体检室流程演示</span><span class="cnt">187 条</span></a>
+        <a class="index-item" href="/#deep"><span class="name">倒计时强度分级</span><span class="cnt">96 条</span></a>
+        <a class="index-item" href="/#deep"><span class="name">手腕固定段落</span><span class="cnt">74 条</span></a>
+        <a class="index-item" href="/#picks"><span class="name">无声版挠痒合集</span><span class="cnt">233 条</span></a>
+        <a class="index-item" href="/#picks"><span class="name">第一视角录制</span><span class="cnt">158 条</span></a>
+        <a class="index-item" href="/#guide"><span class="name">羽毛与棉签道具</span><span class="cnt">61 条</span></a>
+        <a class="index-item" href="/#latest"><span class="name">10 月补档条目</span><span class="cnt">129 条</span></a>
+      </div>
+      <div class="reco" aria-label="相关推荐标签">
+        <a href="/#deep">办公椅固定姿势</a>
+        <a href="/#deep">60 秒读秒节奏</a>
+        <a href="/#guide">无声版剪辑要点</a>
+        <a href="/#faq">分级标注怎么看</a>
+        <a href="/#latest">补档时间线</a>
+        <a href="/#rank">检索量榜单</a>
+      </div>
+    </section>
+
+    <!-- 5 深度解析（全页唯一主体阅读区） -->
+    <article class="deepead" id="deep">
+      <div class="panel-head">
+        <span class="eyebrow">Analysis</span>
+        <h2>深度解析：强度分级是否真的降低了选择成本</h2>
+      </div>
+      <p class="lead">11 月 6 日启用的 v3 分级把原先含混的「中强度」劈成「固定」与「倒计时」两档。直接判断：这次拆分让检索更准，代价是条目描述的工作量翻倍，且第一周的点击分布偏向倒计时档，说明观众对读秒的注意力高于固定动作本身。</p>
+
+      <h3>规则前后：字段从 5 个变成 7 个</h3>
+      <p>v2 时期每条只有布景、时长、有无台词、强度四到五个字段，强度取值是轻、中、重三档。v3 之后加接触物类型、是否含倒计时两个字段，强度改为轻触、固定、倒计时、混合四档。字段增加的直接结果是旧条目需要重写描述，11 月 4 日体检室布景回填时长时，23 条里有 7 条描述与视频实际内容不符，原因都是沿用旧模板。</p>
+      <table class="data-table">
+        <caption>v2 与 v3 字段对照（样本：办公室布景 40 条）</caption>
+        <thead>
+          <tr><th>项目</th><th>v2</th><th>v3</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>强度取值</td><td>轻 / 中 / 重</td><td>轻触 / 固定 / 倒计时 / 混合</td></tr>
+          <tr><td>接触物字段</td><td>无</td><td>有，必填</td></tr>
+          <tr><td class="num">含固定段落比例</td><td class="num">32%</td><td class="num">41%</td></tr>
+          <tr><td class="num">平均描述字数</td><td class="num">46 字</td><td class="num">83 字</td></tr>
+          <tr><td class="num">描述与实际不符</td><td class="num">5 条</td><td class="num">2 条（回填后）</td></tr>
+        </tbody>
+      </table>
+
+      <h3>案例时间线：一条 10 月 29 日条目的三次改写</h3>
+      <p>条目编号 A-1174，办公室布景，原发布账号在 10 月 29 日上传。第一版描述写「中等强度，含手腕动作」，无法判断是否固定；11 月 1 日补档时改为「中强度，手腕固定约 20 秒」；11 月 6 日 v3 生效后改成「固定强度，接触物为指腹，固定段 18 至 22 秒」。三次改写里，只有最后一版把接触物和时长区间都写清，前两版的「中等强度」在检索时仍然要靠人工翻找。</p>
+      <div class="claim-box">
+        <b>可核对判断：</b>把「固定」与「倒计时」拆开之后，同时含两个要素的条目只剩 34 条，占含固定段落条目的 46%。想找「有读秒又有固定」的观众，原先需要浏览 74 条，现在可以直接落在 34 条上。反过来说，只在乎其中一项的观众并不受益，多出的字段反而增加了阅读负担。
+      </div>
+
+      <h3>说法差异：描述者与上传者不是同一人</h3>
+      <p>10 月 29 日到 11 月 6 日之间，有 18 条条目的描述由补档者撰写，而非上传者。补档者无法确认拍摄时的意图，只能按画面推断接触物，导致「羽毛」与「软毛刷」在 3 条里被混写。11 月 5 日的一条评论直接指出编号 A-1192 的描述与画面不符，11 月 6 日分级更新时该条被单独标注为「待核对」。这是转述层与事实层的差别：描述者写下的是他看到的东西，上传者拍下的才是原始事实。</p>
+      <div class="quote-card">
+        “A-1192 里用的是软毛刷，不是羽毛，刷柄在 0:47 清楚露出来。”
+        <cite>——评论者「布景笔记」，11 月 5 日，附时间码</cite>
+      </div>
+
+      <h3>推测与边界：读秒声吸引了注意力</h3>
+      <p>11 月 6 日至 7 日的点击分布里，倒计时档占该两日新增点击的 57%，固定档 29%，轻触档 14%。推测原因是读秒提供明确的时间终点，观众能预判何时结束，心理成本更低。这一推测未做对照组验证，不能当作定论。可以确认的是，无声版条目在同时段的点击占比只有 9%，说明声音线索对选择的影响大于布景本身。</p>
+      <p>需要提醒的是，强度分级只是检索工具，不构成内容审核结论。分级为「倒计时」不等于适合所有观众，条目页仍保留原发布时间、账号名与时长三项可核对信息，遇到描述与实际不符，以视频画面为准。</p>
+    </article>
+
+    <!-- 6 体验指南 -->
+    <section class="panel" id="guide">
+      <div class="panel-head">
+        <span class="eyebrow">Guide</span>
+        <h2>体验指南：按需求筛条目的五个步骤</h2>
+      </div>
+      <p class="panel-sub">从确定布景开始，最后用时长做收口，顺序颠倒会多翻两三倍条目。</p>
+      <ol class="steps">
+        <li>
+          <b>先定布景，不先定强度</b>
+          <p>办公室与体检室的视觉差异最大，先选布景能一步砍掉六成条目。强度标签容易误读，放到后面再筛。</p>
+        </li>
+        <li>
+          <b>再看是否含台词</b>
+          <p>中文台词条目占 71%，无声版 233 条。需要背景安静的场景直接选无声版，可省去逐条试听。</p>
+        </li>
+        <li>
+          <b>用接触物缩小范围</b>
+          <p>羽毛、棉签、指腹三类接触物对应不同强度感。羽毛类 61 条，指腹类最多，棉签类仅 19 条。</p>
+        </li>
+        <li>
+          <b>核对 duration 与描述是否一致</b>
+          <p>11 月 4 日回填后仍有 2 条时长存疑。描述里的秒数若与条目时长字段差 10 秒以上，先看评论区的核对记录。</p>
+        </li>
+        <li>
+          <b>最后看发布时间</b>
+          <p>10 月 18 日之前的补档条目描述较粗，11 月 6 日之后的新条目字段最全。以 11 月 6 日为分界筛，能避开大部分旧模板问题。</p>
+        </li>
+      </ol>
+
+      <div class="compare">
+        <div class="col-a">
+          <h3>适合先看：轻触 + 无声</h3>
+          <ul>
+            <li>时长多在 90 秒内</li>
+            <li>接触物以羽毛、棉签为主</li>
+            <li>无台词，便于静音浏览</li>
+            <li>教室、居家两类布景居多</li>
+          </ul>
+        </div>
+        <div class="col-b">
+          <h3>适合细看：固定 + 倒计时</h3>
+          <ul>
+            <li>时长 3 分钟以上</li>
+            <li>接触物以指腹为主</li>
+            <li>含读秒或计时器画面</li>
+            <li>办公室、体检室两类布景居多</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="panel" id="faq">
+      <div class="panel-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>常见问题</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>办公室挠痒视频为什么大多带倒计时？</summary>
+          <div class="ans">
+            <p>布景本身缺少明确的时间边界，转椅、工位都无法提示何时结束，读秒就成了最省事的收尾方式。312 条办公室条目里，含计时器画面的有 118 条，占比 38%，明显高于教室布景的 12%。</p>
+          </div>
+        </details>
+        <details>
+          <summary>无声版挠痒合集与普通版的差别在哪？</summary>
+          <div class="ans">
+            <p>差别在声音层而不在画面。无声版把台词、环境音全部去掉，只保留动作与呼吸节奏。233 条无声版里，有 41% 属于教室布景；普通版里教室布景只占 19%。选择时先看是否需要声音线索，再决定版本。</p>
+          </div>
+        </details>
+        <details>
+          <summary>强度分级里的「固定」和「倒计时」能同时出现吗？</summary>
+          <div class="ans">
+            <p>可以，这类条目在 v3 里归入「混合」档，共 34 条。判断方式是描述里同时出现固定动作与读秒画面。只含其中一项的条目不会被标为混合，避免检索时重复计数。</p>
+          </div>
+        </details>
+        <details>
+          <summary>描述与实际画面不一致时以哪个为准？</summary>
+          <div class="ans">
+            <p>以视频画面为准。描述由补档者撰写，接触物类型靠肉眼判断，11 月 5 日就有评论指出编号 A-1192 的接触物写错。遇到不一致，先看评论区是否已有核对记录，再看条目是否被标为「待核对」。</p>
+          </div>
+        </details>
+        <details>
+          <summary>为什么撤下了两条无来源转载？</summary>
+          <div class="ans">
+            <p>原发布账号已注销，无法核对拍摄时间与原始语境。11 月 3 日撤下后没有重新上架，原因是缺时间戳会让强度分级失去依据。撤下不等于内容有问题，只是无法核对。</p>
+          </div>
+        </details>
+        <details>
+          <summary>体检室布景条目为什么普遍偏长？</summary>
+          <div class="ans">
+            <p>流程化布景需要交代问诊、检查、记录三段，短了会显得跳跃。187 条体检室条目平均时长 3 分 47 秒，比全库平均多出约 1 分钟。固定段落出现的比例也是四类布景里最高的，达 63%。</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8 用户评论 -->
+    <section class="panel" id="comments">
+      <div class="panel-head">
+        <span class="eyebrow">Comments</span>
+        <h2>用户评论：指向具体条目的 6 条记录</h2>
+      </div>
+      <p class="panel-sub">保留原话，包括中性评价与吐槽。带编号的评论可在条目页对照。</p>
+      <div class="cmt-list">
+        <div class="cmt">
+          <div class="cmt-head"><span class="cmt-name">布景笔记</span><span class="star">★★★☆☆</span><span>11 月 5 日</span><span class="cmt-ref">A-1192</span></div>
+          <p class="cmt-body">接触物写错了，画面里是软毛刷不是羽毛，0:47 能看到刷柄。除了这一点，时长和布景描述都对。</p>
+        </div>
+        <div class="cmt">
+          <div class="cmt-head"><span class="cmt-name">转椅观察</span><span class="star">★★★★☆</span><span>11 月 6 日</span><span class="cmt-ref">A-1174</span></div>
+          <p class="cmt-body">改成「固定段 18 至 22 秒」之后好找多了。之前写中等强度，我翻了十几条才碰到。倒计时段落其实只有最后 8 秒，描述没写全。</p>
+        </div>
+        <div class="cmt">
+          <div class="cmt-head"><span class="cmt-name">静音党</span><span class="star">★★★★★</span><span>11 月 7 日</span><span class="cmt-ref">教室无声版</span></div>
+          <p class="cmt-body">教室那批无声版很适合夜里看，粉笔声被去掉了有点可惜，但整体安静。9 条里第 5 条镜头晃得厉害，其余稳定。</p>
+        </div>
+        <div class="cmt">
+          <div class="cmt-head"><span class="cmt-name">分级怀疑者</span><span class="star">★★☆☆☆</span><span>11 月 6 日</span><span class="cmt-ref">通用</span></div>
+          <p class="cmt-body">字段多不等于好用。混合档只有 34 条，我按图索骥十分钟就翻完了，不如直接搜接触物。分级对老条目没什么帮助。</p>
+        </div>
+        <div class="cmt">
+          <div class="cmt-head"><span class="cmt-name">体检室常客</span><span class="star">★★★★☆</span><span>11 月 4 日</span><span class="cmt-ref">流程演示</span></div>
+          <p class="cmt-body">补上时长字段之后顺手很多。4 分 02 秒那条三段切得清楚，问诊段 54 秒，检查段 1 分 41 秒，记录段最好看。</p>
+        </div>
+        <div class="cmt">
+          <div class="cmt-head"><span class="cmt-name">棉签党</span><span class="star">★★★★☆</span><span>11 月 2 日</span><span class="cmt-ref">羽毛与棉签对比</span></div>
+          <p class="cmt-body">同一角色同布景只换接触物，这种对照很实用。棉签那半段太短，只有 38 秒，建议下次延长到 1 分钟以上。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 相关资讯 -->
+    <section class="panel" id="news">
+      <div class="panel-head">
+        <span class="eyebrow">Briefs</span>
+        <h2>相关资讯：平台规则与录制方式的变化</h2>
+      </div>
+      <div class="news-list">
+        <div class="news-item">
+          <span class="date">11 月 7 日<br>平台</span>
+          <div>
+            <h3>短视频平台调整敏感场景提示框</h3>
+            <p>含固定动作的片段在播放前多出一层提示，需手动关闭。已有 12 条转载条目因此被重新压缩时长。</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <span class="date">11 月 5 日<br>录制</span>
+          <div>
+            <h3>第一视角设备从挂脖改为桌面支臂</h3>
+            <p>桌面支臂俯拍更稳，画面只到手部。11 月 5 日之后新录的 7 条第一视角条目全部使用该方式。</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <span class="date">11 月 3 日<br>版权</span>
+          <div>
+            <h3>两条无来源转载被撤下</h3>
+            <p>原账号注销，缺时间戳。撤下后未再上架，相关搜索词转由补档条目承接。</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <span class="date">10 月 29 日<br>社区</span>
+          <div>
+            <h3>补档志愿者新增 4 人</h3>
+            <p>负责给 10 月 18 日之前的条目补写接触物与时长字段。至 11 月 6 日已补 129 条，剩余 61 条待处理。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="panel" id="reco">
+      <div class="panel-head">
+        <span class="eyebrow">Related</span>
+        <h2>相关推荐：按具体场景延伸</h2>
+      </div>
+      <p class="panel-sub">以下标签对应已归档条目，点击落到对应分类或解析段落。</p>
+      <div class="reco">
+        <a href="/#picks">办公室转椅倒计时</a>
+        <a href="/#picks">教室后排无声片段</a>
+        <a href="/#guide">羽毛与棉签对照测试</a>
+        <a href="/#deep">手腕固定 20 秒段落</a>
+        <a href="/#picks">居家毛毯双人互动</a>
+        <a href="/#picks">体检室问诊检查记录三段</a>
+        <a href="/#picks">夜间桌面第一视角</a>
+        <a href="/#deep">60 秒读秒节奏</a>
+        <a href="/#latest">10 月 18 日补档批次</a>
+        <a href="/#faq">混合档 34 条怎么找</a>
+      </div>
+    </section>
+
+    <!-- 11 榜单（补充板块） -->
+    <section class="panel" id="rank">
+      <div class="panel-head">
+        <span class="eyebrow">Rank</span>
+        <h2>检索量榜单：10 月 9 日至 11 月 7 日的搜索词</h2>
+      </div>
+      <p class="panel-sub">按站内搜索次数排序，括号内为较上一周期的变化。</p>
+      <ol class="rank-list">
+        <li><span><span class="rk-name">办公室挠痒视频</span><br><span class="rk-note">集中在转椅与工位两种构图</span></span><span class="rk-val">↑ 18%</span></li>
+        <li><span><span class="rk-name">无声版挠痒合集</span><br><span class="rk-note">夜间检索占 62%</span></span><span class="rk-val">↑ 24%</span></li>
+        <li><span><span class="rk-name">倒计时强度分级</span><br><span class="rk-note">11 月 6 日后首次进前三</span></span><span class="rk-val">↑ 41%</span></li>
+        <li><span><span class="rk-name">教室轻触片段</span><br><span class="rk-note">与开学季无关，全年平稳</span></span><span class="rk-val">→ 持平</span></li>
+        <li><span><span class="rk-name">手腕固定段落</span><br><span class="rk-note">多与倒计时组合检索</span></span><span class="rk-val">↑ 9%</span></li>
+        <li><span><span class="rk-name">体检室流程演示</span><br><span class="rk-note">时长字段补齐后回升</span></span><span class="rk-val">↑ 6%</span></li>
+      </ol>
+    </section>
+
+  </main>
+
+  <!-- 侧栏 -->
+  <aside class="sidecol" aria-label="侧栏导航与快讯">
+    <div class="side-box">
+      <h2>本页导航</h2>
+      <ul class="side-nav" id="sideNav">
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#picks">精选内容推荐</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#cats">分类入口</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">用户评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#reco">相关推荐</a></li>
+        <li><a href="/#rank">检索量榜单</a></li>
+      </ul>
+    </div>
+    <div class="side-box">
+      <h3>近期条目动态</h3>
+      <ul class="side-news">
+        <li><time datetime="2026-11-07">11-07</time><span>教室无声片段新增 9 条</span></li>
+        <li><time datetime="2026-11-06">11-06</time><span>强度分级 v3 生效</span></li>
+        <li><time datetime="2026-11-04">11-04</time><span>体检室补时长 23 条</span></li>
+        <li><time datetime="2026-11-03">11-03</time><span>撤下 2 条无来源转载</span></li>
+        <li><time datetime="2026-11-02">11-02</time><span>评论新增条目指向标记</span></li>
+      </ul>
+      <p class="side-note">侧栏只放导航与时间线，不重复正文判断。条目描述与评论若有冲突，以视频画面为准。</p>
+    </div>
+  </aside>
+</div>
+
+<!-- 页尾 -->
+<footer class="sitefoot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+            <rect width="64" height="64" rx="15" fill="#c8364f"/>
+            <path d="M18 24c4-7 11-7 14 0s10 7 14 0" stroke="#fff" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+            <path d="M18 42c4-7 11-7 14 0s10 7 14 0" stroke="#f6c9d0" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+          </svg>
+          <strong>挠痒痒网站 vk</strong>
+        </div>
+        <p class="foot-pos">按布景、强度、语言三轴归档短视频与角色扮演片段，附分级说明与核对记录。</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h3>布景频道</h3>
+          <ul>
+            <li><a href="/#overview">办公室布景</a></li>
+            <li><a href="/#overview">教室布景</a></li>
+            <li><a href="/#overview">居家布景</a></li>
+            <li><a href="/#overview">体检室布景</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>检索与解析</h3>
+          <ul>
+            <li><a href="/#cats">分类入口</a></li>
+            <li><a href="/#deep">强度分级解析</a></li>
+            <li><a href="/#rank">检索量榜单</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>参与与说明</h3>
+          <ul>
+            <li><a href="/#guide">体验指南</a></li>
+            <li><a href="/#comments">用户评论</a></li>
+            <li><a href="/#news">补档资讯</a></li>
+            <li><a href="/#latest">更新记录</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>条目数据含示例条目，部分编号与账号为归档演示使用；带时间码的核对记录以评论原文为准。</p>
+      <p>更新时间 2026-11-08 · 对应正文第 3 节与第 9 节更新项 · © 2026 挠痒痒网站 vk</p>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="回到顶部">顶部</button>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('navmain');
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.textContent = open ? '收起' : '菜单';
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 860){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.textContent = '菜单';
+      }
+    });
+  }
+
+  // 侧栏滚动高亮
+  var links = document.querySelectorAll('#sideNav a');
+  var map = {};
+  links.forEach(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    var el = document.getElementById(id);
+    if(el) map[id] = {el: el, link: a};
+  });
+  var ids = Object.keys(map);
+  function onScroll(){
+    var offset = 130;
+    var current = null;
+    ids.forEach(function(id){
+      var top = map[id].el.getBoundingClientRect().top;
+      if(top - offset <= 0) current = id;
+    });
+    links.forEach(function(a){ a.classList.remove('active'); });
+    if(current && map[current]) map[current].link.classList.add('active');
+  }
+  var ticking = false;
+  window.addEventListener('scroll', function(){
+    if(!ticking){
+      window.requestAnimationFrame(function(){ onScroll(); ticking = false; });
+      ticking = true;
+    }
+  }, {passive:true});
+  onScroll();
+
+  // 回到顶部
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 480) toTop.classList.add('show');
+    else toTop.classList.remove('show');
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // 本地搜索
+  var input = document.getElementById('q');
+  var fb = document.getElementById('searchFb');
+  var index = [
+    {t:'办公室挠痒视频', k:'办公室 转椅 工位 倒计时 固定', s:'#picks'},
+    {t:'教室轻触片段', k:'教室 课桌 无声 粉笔 轻触', s:'#picks'},
+    {t:'居家布景合集', k:'居家 沙发 毛毯 双人 暖光', s:'#picks'},
+    {t:'体检室流程演示', k:'体检室 白墙 诊床 三段 固定', s:'#picks'},
+    {t:'倒计时强度分级', k:'倒计时 读秒 强度 分级 v3', s:'#deep'},
+    {t:'手腕固定段落', k:'手腕 固定 20秒 接触物', s:'#deep'},
+    {t:'无声版挠痒合集', k:'无声 静音 教室 环境音', s:'#picks'},
+    {t:'羽毛与棉签对比测试', k:'羽毛 棉签 指腹 对照 接触物', s:'#picks'},
+    {t:'强度分级 v3 解析', k:'分级 字段 改写 核对 时间线', s:'#deep'},
+    {t:'体验指南五步筛选', k:'指南 步骤 布景 时长 筛选', s:'#guide'},
+    {t:'常见问题', k:'FAQ 疑问 混合档 撤下 时长', s:'#faq'},
+    {t:'用户评论', k:'评论 吐槽 编号 时间码', s:'#comments'},
+    {t:'检索量榜单', k:'榜单 搜索词 排名 变化', s:'#rank'},
+    {t:'补档时间线', k:'补档 11月 更新 撤下 回填', s:'#latest'}
+  ];
+  function render(){
+    var v = input.value.trim().toLowerCase();
+    if(!v){ fb.classList.remove('show'); fb.innerHTML=''; return; }
+    var hits = index.filter(function(item){
+      return item.t.toLowerCase().indexOf(v) > -1 || item.k.toLowerCase().indexOf(v) > -1;
+    });
+    fb.classList.add('show');
+    if(!hits.length){
+      fb.innerHTML = '<strong>没有匹配条目。</strong>试试「办公室」「倒计时」「无声」或「接触物」这类具体词。';
+      return;
+    }
+    fb.innerHTML = '找到 ' + hits.length + ' 项：' +
+      hits.slice(0,6).map(function(h){
+        return '<div style="margin-top:6px"><a href="/'+h.s+'">'+h.t+'</a></div>';
+      }).join('');
+  }
+  input.addEventListener('input', render);
+  input.addEventListener('focus', render);
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.search')) fb.classList.remove('show');
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"挠痒痒网站 vk",
+  "description":"按布景、强度、语言归档挠痒痒视频与角色扮演片段的检索站，附分级说明与核对记录。",
+  "inLanguage":"zh-CN",
+  "dateModified":"2026-11-08"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"办公室挠痒视频为什么大多带倒计时？",
+      "acceptedAnswer":{"@type":"Answer","text":"布景本身缺少明确的时间边界，转椅、工位都无法提示何时结束，读秒就成了最省事的收尾方式。312 条办公室条目里，含计时器画面的有 118 条，占比 38%，明显高于教室布景的 12%。"}
+    },
+    {
+      "@type":"Question",
+      "name":"无声版挠痒合集与普通版的差别在哪？",
+      "acceptedAnswer":{"@type":"Answer","text":"差别在声音层而不在画面。无声版把台词、环境音全部去掉，只保留动作与呼吸节奏。233 条无声版里，有 41% 属于教室布景；普通版里教室布景只占 19%。"}
+    },
+    {
+      "@type":"Question",
+      "name":"强度分级里的固定和倒计时能同时出现吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"可以，这类条目在 v3 里归入混合档，共 34 条。判断方式是描述里同时出现固定动作与读秒画面。只含其中一项的条目不会被标为混合。"}
+    },
+    {
+      "@type":"Question",
+      "name":"描述与实际画面不一致时以哪个为准？",
+      "acceptedAnswer":{"@type":"Answer","text":"以视频画面为准。描述由补档者撰写，接触物类型靠肉眼判断，11 月 5 日就有评论指出编号 A-1192 的接触物写错。遇到不一致，先看评论区核对记录与待核对标记。"}
+    },
+    {
+      "@type":"Question",
+      "name":"为什么撤下了两条无来源转载？",
+      "acceptedAnswer":{"@type":"Answer","text":"原发布账号已注销，无法核对拍摄时间与原始语境。11 月 3 日撤下后没有重新上架，原因是缺时间戳会让强度分级失去依据。"}
+    },
+    {
+      "@type":"Question",
+      "name":"体检室布景条目为什么普遍偏长？",
+      "acceptedAnswer":{"@type":"Answer","text":"流程化布景需要交代问诊、检查、记录三段，短了会显得跳跃。187 条体检室条目平均时长 3 分 47 秒，比全库平均多出约 1 分钟，固定段落出现比例达 63%。"}
+    }
+  ]
+}
+</script>
+</body>
+          </html>
