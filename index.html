@@ -1,0 +1,838 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ks舞团夏柏108期-编舞拆解与排练指南</title>
+<meta name="description" content="ks舞团夏柏108期聚焦本期编舞结构与排练安排：拆解夏柏路演版走位、音乐切分、队形换位与体能分配，附FAQ、评论与相关推荐，帮舞者按节奏跟练。">
+<meta name="keywords" content="ks舞团夏柏108期">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1b2e'/%3E%3Cpath d='M18 44 L32 16 L46 44' stroke='%23ff7a45' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='48' r='4' fill='%23ffd166'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"ks舞团夏柏108期","inLanguage":"zh-CN","description":"ks舞团夏柏108期编舞拆解、排练安排与跟练指南。"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"夏柏108期编舞的BPM和原曲版本怎么确认？","acceptedAnswer":{"@type":"Answer","text":"排练版以128BPM的剪辑版为准，鼓点在第二段副歌前多出两拍过门，跟原曲完整版差4秒，队里用剪辑版对拍。"}},
+{"@type":"Question","name":"零基础能跟108期的副歌段吗？","acceptedAnswer":{"@type":"Answer","text":"副歌段8个八拍里有3个八拍是重复的肩胯组合，零基础可先练这3个八拍；第二段副歌的交叉换位需要两人配合，建议先单练脚步。"}},
+{"@type":"Question","name":"夏柏路演版和排练版队形差多少？","acceptedAnswer":{"@type":"Answer","text":"路演版因场地宽度限制，把原定的四列横排改成两列斜排，第三段桥段的圆形走位缩为半圆，人数从12人减到9人。"}},
+{"@type":"Question","name":"108期排练要准备哪些护具和鞋子？","acceptedAnswer":{"@type":"Answer","text":"地板动作用护膝，第三段有两次单膝落地；鞋子选薄底帆布鞋，木地板场地摩擦力够，别穿厚底气垫鞋。"}},
+{"@type":"Question","name":"缺一次排练怎么补108期的走位？","acceptedAnswer":{"@type":"Answer","text":"先看队内走位图第3版，重点补第二段副歌的交叉换位和结尾的扇形散开，这两处是缺练最容易错位的节点。"}}
+]}
+</script>
+<style>
+:root{
+--ink:#1d1b2e;--ink-2:#3b3852;--mut:#6b6785;--line:#e4e1ee;
+--bg:#faf8f4;--card:#ffffff;--soft:#f1edf9;
+--brand:#4b2fbf;--brand-2:#6b4ce6;--accent:#ff7a45;--accent-2:#ffd166;
+--ok:#1f8a63;--warn:#b4432c;
+--r:14px;--r-s:9px;
+--sp:clamp(14px,2vw,22px);
+--shadow:0 2px 10px rgba(29,27,46,.07),0 10px 28px rgba(29,27,46,.05);
+--fs-h1:clamp(28px,4.6vw,44px);
+--fs-h2:clamp(20px,2.6vw,27px);
+--fs-h3:clamp(16px,1.8vw,18.5px);
+--sticky:118px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--sticky)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;line-height:1.78;font-size:16px;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3{line-height:1.34;margin:0 0 .5em}
+p{margin:0 0 .9em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--sp)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* 顶部吸顶组 */
+.stickgroup{position:sticky;top:0;z-index:60}
+.notice{background:var(--ink);color:#efeaff;font-size:13.5px;padding:8px 0}
+.notice .wrap{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.notice b{color:var(--accent-2);font-weight:600}
+.notice .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;box-shadow:0 0 0 4px rgba(255,122,69,.18)}
+.notice a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.sitehead{background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);box-shadow:0 4px 16px rgba(29,27,46,.05)}
+.headrow{display:flex;align-items:center;gap:14px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{width:40px;height:40px;flex:none}
+.brandtext{font-weight:800;font-size:17.5px;letter-spacing:.2px;color:var(--ink);line-height:1.2}
+.brandtext small{display:block;font-size:11px;font-weight:500;color:var(--mut);letter-spacing:1.4px}
+.nav{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}
+.nav a{font-size:14.5px;color:var(--ink-2);padding:7px 10px;border-radius:8px}
+.nav a:hover{background:var(--soft);text-decoration:none;color:var(--brand)}
+.nav a.active{background:var(--brand);color:#fff}
+.search{margin-left:auto;display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:4px 6px 4px 12px;background:#fff;min-width:0}
+.search input{border:0;outline:0;font:inherit;font-size:13.5px;width:132px;min-width:0;background:transparent;color:var(--ink)}
+.search button{border:0;background:var(--brand);color:#fff;border-radius:999px;font:inherit;font-size:13px;padding:5px 12px;cursor:pointer}
+.search button:hover{background:var(--brand-2)}
+.menubtn{display:none;border:1px solid var(--line);background:#fff;border-radius:9px;font:inherit;font-size:14px;padding:6px 11px;cursor:pointer;color:var(--ink-2)}
+.searchnote{display:none;font-size:13px;color:var(--warn);padding:0 0 8px}
+.searchnote.on{display:block}
+
+/* 首屏 */
+.hero{position:relative;overflow:hidden;background:
+radial-gradient(1100px 380px at 88% -12%,rgba(255,122,69,.16),transparent 62%),
+radial-gradient(760px 340px at 6% 108%,rgba(107,76,230,.16),transparent 64%),
+linear-gradient(180deg,#f7f4ff 0%,#faf8f4 82%)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(18px,3.4vw,44px);align-items:center;padding-top:clamp(26px,4.6vw,54px);padding-bottom:clamp(26px,4.6vw,54px)}
+.tagline{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:12.5px;color:var(--brand);font-weight:600;letter-spacing:.4px;margin-bottom:14px}
+.tagline .pulse{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+h1{font-size:var(--fs-h1);letter-spacing:-.5px;font-weight:800}
+h1 .hl{background:linear-gradient(180deg,transparent 64%,var(--accent-2) 64%)}
+.hero-lead{font-size:16.5px;color:var(--ink-2);max-width:38em}
+.hero-lead b{color:var(--ink);font-weight:600}
+.hero-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.btn{display:inline-block;padding:11px 20px;border-radius:999px;font-size:15px;font-weight:600;border:1px solid transparent}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 6px 18px rgba(75,47,191,.26)}
+.btn-primary:hover{background:var(--brand-2);text-decoration:none;transform:translateY(-2px)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand);text-decoration:none;transform:translateY(-2px)}
+.btn{transition:transform .18s ease,background .18s ease,border-color .18s ease}
+.hero-stats{display:flex;gap:22px;margin-top:22px;flex-wrap:wrap}
+.hstat strong{display:block;font-size:23px;color:var(--brand);letter-spacing:-.4px}
+.hstat span{font-size:12.5px;color:var(--mut)}
+.hero-art{position:relative;min-height:290px}
+.hero-art svg{width:100%;height:auto;filter:drop-shadow(0 16px 30px rgba(75,47,191,.14))}
+.art-badge{position:absolute;right:4%;bottom:-6px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:12.5px;color:var(--ink-2);box-shadow:var(--shadow)}
+.art-badge b{color:var(--accent);font-size:15px}
+
+/* 主内容骨架 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 306px;gap:clamp(18px,2.6vw,32px);padding-top:clamp(26px,3.4vw,40px);padding-bottom:40px;align-items:start}
+main>section{margin-bottom:clamp(26px,3.4vw,42px)}
+.sec-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:4px}
+.sec-head h2{font-size:var(--fs-h2);margin:0}
+.sec-head .kicker{font-size:12px;letter-spacing:1.6px;color:var(--accent);font-weight:700;text-transform:uppercase}
+.sec-sub{color:var(--mut);font-size:14px;margin:6px 0 16px;max-width:60em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+.pad{padding:clamp(15px,2vw,22px)}
+
+/* 概览 */
+.overview{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ovcell{background:#fff;border:1px solid var(--line);border-radius:var(--r-s);padding:14px}
+.ovcell h3{font-size:15px;margin:0 0 4px;color:var(--brand)}
+.ovcell p{font-size:13.5px;color:var(--ink-2);margin:0}
+.ovcell strong{color:var(--ink)}
+
+/* 精选卡片网格 */
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.pick{display:flex;flex-direction:column;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);transition:transform .18s ease,box-shadow .18s ease}
+.pick:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(29,27,46,.12)}
+.pick img{width:100%;height:132px;object-fit:cover;aspect-ratio:16/9}
+.pick .body{padding:13px 14px 15px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pick .meta{font-size:11.5px;color:var(--mut);letter-spacing:.3px}
+.pick h3{font-size:15.5px;margin:0}
+.pick p{font-size:13.5px;color:var(--ink-2);margin:0}
+.pick .foot{margin-top:auto;font-size:12.5px;color:var(--brand);font-weight:600}
+
+/* 最新更新 时间线列表 */
+.updates{list-style:none;margin:0;padding:0}
+.updates li{display:grid;grid-template-columns:88px 1fr;gap:14px;padding:13px 0;border-bottom:1px dashed var(--line)}
+.updates li:last-child{border-bottom:0}
+.updates time{font-size:12.5px;color:var(--mut);font-variant-numeric:tabular-nums;padding-top:2px}
+.updates .ut{font-size:14.6px;font-weight:600;margin:0 0 3px}
+.updates .ud{font-size:13.5px;color:var(--ink-2);margin:0}
+.badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;background:var(--soft);color:var(--brand);font-weight:600;margin-left:6px;vertical-align:1px}
+.badge.warn{background:#fdeee8;color:var(--warn)}
+.badge.ok{background:#e6f6ef;color:var(--ok)}
+
+/* 分类入口 标签索引 */
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;color:var(--ink-2)}
+.chip:hover{border-color:var(--brand);color:var(--brand);text-decoration:none;background:var(--soft)}
+.chip i{font-style:normal;font-size:11.5px;color:var(--mut)}
+
+/* 深度解析 分栏正文 */
+.prose{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:clamp(18px,2.6vw,30px)}
+.prose h2{font-size:var(--fs-h2)}
+.prose h3{font-size:var(--fs-h3);margin-top:1.5em;color:var(--ink);border-left:4px solid var(--accent);padding-left:11px}
+.prose p{color:var(--ink-2);font-size:15.4px}
+.prose p strong{color:var(--ink)}
+.prose .lede{font-size:16px;color:var(--ink)}
+.cols2{column-count:2;column-gap:30px;column-rule:1px solid var(--line)}
+.cols2 h3,.cols2 .pull,.cols2 .checktable{column-span:none}
+@media(max-width:760px){.cols2{column-count:1;column-rule:0}}
+.pull{margin:12px 0;padding:14px 16px;background:linear-gradient(135deg,#f6f1ff,#fff7f1);border:1px solid #e8dffb;border-left:5px solid var(--brand);border-radius:var(--r-s);font-size:15px;color:var(--ink);break-inside:avoid}
+.pull cite{display:block;font-size:12.5px;color:var(--mut);font-style:normal;margin-top:6px}
+.checktable{width:100%;border-collapse:collapse;font-size:13.8px;margin:12px 0;break-inside:avoid}
+.checktable caption{caption-side:top;text-align:left;font-size:12.5px;color:var(--mut);padding-bottom:6px}
+.checktable th,.checktable td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.checktable th{background:var(--soft);color:var(--ink);font-weight:600;white-space:nowrap}
+.checktable td{color:var(--ink-2)}
+.claim{background:#fff8f3;border:1px dashed #f3c9b3;border-radius:var(--r-s);padding:12px 14px;font-size:14px;color:var(--ink-2);margin:12px 0}
+.claim b{color:var(--warn)}
+
+/* 体验指南 编号步骤 */
+.steps{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.steps li{counter-increment:s;position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px 16px 14px 58px;box-shadow:var(--shadow)}
+.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:14px;top:13px;width:32px;height:32px;border-radius:9px;background:var(--brand);color:#fff;font-size:14px;font-weight:700;display:grid;place-items:center;font-variant-numeric:tabular-nums}
+.steps b{display:block;font-size:15px;margin-bottom:2px}
+.steps p{font-size:13.8px;margin:0;color:var(--ink-2)}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cpanel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:15px 16px}
+.cpanel h3{font-size:15px;margin:0 0 8px;display:flex;align-items:center;gap:8px}
+.cpanel h3 .tag{font-size:11px;padding:2px 8px;border-radius:999px;background:var(--soft);color:var(--brand)}
+.cpanel.b h3 .tag{background:#fdeee8;color:var(--warn)}
+.cpanel ul{margin:0;padding-left:18px;font-size:13.8px;color:var(--ink-2)}
+.cpanel li{margin-bottom:5px}
+
+/* FAQ */
+details{background:#fff;border:1px solid var(--line);border-radius:var(--r-s);padding:0;margin-bottom:10px;overflow:hidden}
+details summary{list-style:none;cursor:pointer;padding:13px 42px 13px 15px;font-size:15px;font-weight:600;position:relative;color:var(--ink)}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";position:absolute;right:15px;top:50%;transform:translateY(-50%);font-size:19px;color:var(--brand);font-weight:600;transition:transform .18s ease}
+details[open] summary::after{content:"−"}
+details summary:hover{background:var(--soft)}
+details .ans{padding:0 15px 14px;font-size:14.2px;color:var(--ink-2);border-top:1px dashed var(--line);margin-top:0;padding-top:11px}
+
+/* 评论 */
+.comments{display:grid;gap:11px}
+.cmt{background:#fff;border:1px solid var(--line);border-radius:var(--r-s);padding:13px 15px}
+.cmt .who{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mut);margin-bottom:5px;flex-wrap:wrap}
+.ava{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;color:#fff;background:var(--brand-2);flex:none}
+.ava.a1{background:#e06a3c}.ava.a2{background:#1f8a63}.ava.a3{background:#5b6bd6}.ava.a4{background:#9a4bbf}
+.cmt p{font-size:14px;margin:0;color:var(--ink-2)}
+.cmt .ref{font-size:12px;color:var(--brand);background:var(--soft);border-radius:6px;padding:1px 7px;display:inline-block;margin:0 3px 3px 0}
+.cmt .stars{color:var(--accent);letter-spacing:1px;font-size:12.5px}
+
+/* 相关资讯 紧凑列表 */
+.news{list-style:none;margin:0;padding:0;background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+.news li{display:grid;grid-template-columns:78px 1fr auto;gap:12px;align-items:center;padding:12px 15px;border-bottom:1px solid var(--line);font-size:14.2px}
+.news li:last-child{border-bottom:0}
+.news .date{font-size:12px;color:var(--mut);font-variant-numeric:tabular-nums}
+.news a{color:var(--ink)}
+.news a:hover{color:var(--brand)}
+.news .plat{font-size:11.5px;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:1px 8px;white-space:nowrap}
+
+/* 相关推荐 标签 */
+.recos{display:flex;flex-wrap:wrap;gap:8px}
+.recos a{background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:13.6px;color:var(--ink-2)}
+.recos a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+
+/* 侧栏 */
+aside{display:flex;flex-direction:column;gap:16px;position:sticky;top:calc(var(--sticky) + 10px)}
+.sidecard{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:15px 16px}
+.sidecard h2{font-size:15px;margin:0 0 10px;letter-spacing:.2px;display:flex;align-items:center;gap:7px}
+.sidecard h2::before{content:"";width:4px;height:15px;border-radius:2px;background:var(--accent)}
+.sidenav{list-style:none;margin:0;padding:0;font-size:14px}
+.sidenav a{display:block;padding:6px 9px;border-radius:7px;color:var(--ink-2);border-left:3px solid transparent}
+.sidenav a:hover{background:var(--soft);color:var(--brand);text-decoration:none}
+.sidenav a.active{background:var(--soft);color:var(--brand);font-weight:600;border-left-color:var(--brand)}
+.rank{list-style:none;counter-reset:r;margin:0;padding:0;font-size:13.8px}
+.rank li{counter-increment:r;display:flex;gap:9px;padding:7px 0;border-bottom:1px dashed var(--line);color:var(--ink-2)}
+.rank li:last-child{border-bottom:0}
+.rank li::before{content:counter(r);flex:none;width:20px;height:20px;border-radius:6px;background:var(--soft);color:var(--brand);font-size:12px;font-weight:700;display:grid;place-items:center;margin-top:3px}
+.rank b{color:var(--ink);font-weight:600}
+.tipzone{background:linear-gradient(140deg,#2a2144,#1d1b2e);color:#e9e4ff;border:0}
+.tipzone h2{color:#fff}
+.tipzone h2::before{background:var(--accent-2)}
+.tipzone p{font-size:13.4px;color:#c9c1ea;margin:0 0 8px}
+.tipzone ul{margin:0;padding-left:17px;font-size:13.4px;color:#d8d2f2}
+.tipzone li{margin-bottom:5px}
+
+/* 页脚 */
+footer{background:#1d1b2e;color:#cfc9e6;margin-top:20px;padding:clamp(28px,4vw,48px) 0 20px;font-size:14px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:22px}
+footer h2{font-size:14px;color:#fff;margin:0 0 10px;letter-spacing:.6px}
+footer a{color:#cfc9e6}
+footer a:hover{color:var(--accent-2)}
+.flinks{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:13.6px}
+.fbrand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.fbrand svg{width:34px;height:34px}
+.fbrand span{font-weight:800;color:#fff;font-size:16px}
+.fpos{font-size:13.4px;color:#a9a2c6;margin:0 0 10px;max-width:26em}
+.fmeta{font-size:12.4px;color:#8a83a8;line-height:1.7}
+.fbottom{border-top:1px solid #332e4d;margin-top:24px;padding-top:14px;font-size:12.4px;color:#8a83a8;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* 回到顶部 */
+.totop{position:fixed;right:18px;bottom:20px;z-index:70;border:0;background:var(--brand);color:#fff;width:44px;height:44px;border-radius:50%;font-size:18px;cursor:pointer;box-shadow:0 8px 22px rgba(75,47,191,.4);opacity:0;visibility:hidden;transform:translateY(10px);transition:.22s ease}
+.totop.on{opacity:1;visibility:visible;transform:none}
+.totop:hover{background:var(--brand-2)}
+
+/* 响应式 */
+@media(max-width:1000px){
+.layout{grid-template-columns:minmax(0,1fr)}
+aside{position:static;order:2}
+.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+.fgrid{grid-template-columns:1fr 1fr}
+.hero .wrap{grid-template-columns:1fr}
+.hero-art{order:-1;min-height:0;max-width:420px}
+}
+@media(max-width:820px){
+.nav{display:none;width:100%;order:5;margin:0;border-top:1px solid var(--line);padding:8px 0 2px}
+.nav.open{display:flex}
+.nav a{flex:1 1 calc(50% - 4px);text-align:center;font-size:14px}
+.menubtn{display:inline-block}
+.headrow{flex-wrap:wrap;gap:10px;padding:10px 0}
+.brand{margin-right:auto}
+.search{margin-left:0;order:4;flex:1 1 100%}
+.search input{flex:1;width:auto}
+}
+@media(max-width:640px){
+.overview{grid-template-columns:1fr}
+.grid3{grid-template-columns:1fr}
+.compare{grid-template-columns:1fr}
+.updates li{grid-template-columns:1fr;gap:2px}
+.news li{grid-template-columns:1fr auto;gap:4px 10px}
+.news .date{grid-column:1;order:2}
+.news a{grid-column:1/-1;order:3}
+.fgrid{grid-template-columns:1fr}
+.hero-stats{gap:16px}
+.hstat strong{font-size:20px}
+.totop{right:12px;bottom:14px}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*{transition:none!important;animation:none!important}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="stickgroup">
+  <div class="notice">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <span><b>排练更新</b>：11月7日 108期第三段桥段改斜排，队形图升到 v3；11月6日发布128BPM剪辑版伴奏。</span>
+      <a href="/#updates">查看全部更新</a>
+    </div>
+  </div>
+
+  <header class="sitehead">
+    <div class="wrap headrow">
+      <a class="brand" href="/#top" aria-label="ks舞团夏柏108期 首页">
+        <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#1d1b2e"/>
+          <path d="M17 45 L31 17 L45 45" stroke="#ff7a45" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="31" cy="49" r="4" fill="#ffd166"/>
+        </svg>
+        <span class="brandtext">ks舞团夏柏108期<small>KS CREW · XIA BAI</small></span>
+      </a>
+      <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="sitenav">菜单</button>
+      <nav class="nav" id="sitenav" aria-label="主题导航">
+        <a href="/#overview">本期概览</a>
+        <a href="/#picks">精选片段</a>
+        <a href="/#updates">排练更新</a>
+        <a href="/#channels">分类入口</a>
+        <a href="/#deep">编舞拆解</a>
+        <a href="/#guide">跟练指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">舞者反馈</a>
+      </nav>
+      <form class="search" role="search" id="searchform" aria-label="站内查找">
+        <label for="q" class="visually-hidden" style="position:absolute;left:-9999px">查找本期内容</label>
+        <input id="q" type="search" placeholder="找队形 / 拍点 / 名场面" autocomplete="off">
+        <button type="submit">查找</button>
+      </form>
+    </div>
+    <div class="wrap searchnote" id="searchnote" role="status" aria-live="polite"></div>
+  </header>
+</div>
+
+<div id="top"></div>
+
+<section class="hero" aria-label="主题首屏">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="tagline"><span class="pulse" aria-hidden="true"></span>第108期 · 夏柏路演复盘</span>
+      <h1><span class="hl">ks舞团夏柏108期</span></h1>
+      <p class="hero-lead">本期主角是夏柏在11月7日彩排的<b>128BPM剪辑版编舞</b>：9人两列斜排、三段副歌共24个八拍、两次单膝落地。把拍点、换位和体能节点拆开看，才明白第三段桥段为什么临时缩成半圆。</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="/#deep">读编舞拆解</a>
+        <a class="btn btn-ghost" href="/#guide">看跟练步骤</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><strong>24</strong><span>八拍总数（三段副歌）</span></div>
+        <div class="hstat"><strong>9人</strong><span>路演版上场人数</span></div>
+        <div class="hstat"><strong>128</strong><span>剪辑版BPM</span></div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 320" role="img" aria-label="九人两列斜排队形示意">
+        <defs>
+          <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#6b4ce6"/><stop offset="1" stop-color="#4b2fbf"/>
+          </linearGradient>
+        </defs>
+        <rect x="14" y="16" width="392" height="288" rx="22" fill="#ffffff" stroke="#e4e1ee"/>
+        <circle cx="86" cy="70" r="46" fill="#f1edf9"/>
+        <circle cx="340" cy="238" r="54" fill="#fff1e9"/>
+        <g stroke="#d9d2f0" stroke-width="1.4">
+          <path d="M40 250 L190 100"/><path d="M70 268 L220 118"/><path d="M100 286 L250 136"/>
+        </g>
+        <g fill="url(#gA)">
+          <circle cx="150" cy="152" r="12"/><circle cx="180" cy="176" r="12"/><circle cx="210" cy="200" r="12"/>
+        </g>
+        <g fill="#ff7a45">
+          <circle cx="238" cy="118" r="10"/><circle cx="266" cy="140" r="10"/><circle cx="294" cy="162" r="10"/>
+        </g>
+        <g fill="#ffd166" stroke="#e0a92c" stroke-width="1">
+          <circle cx="104" cy="206" r="8"/><circle cx="128" cy="226" r="8"/><circle cx="152" cy="246" r="8"/>
+        </g>
+        <g font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="11" fill="#6b6785">
+          <text x="34" y="42">A组 · 前排斜线</text>
+          <text x="236" y="86">B组 · 后交叉位</text>
+          <text x="52" y="286">C组 · 补位</text>
+        </g>
+        <rect x="290" y="34" width="104" height="30" rx="8" fill="#1d1b2e"/>
+        <text x="304" y="53" font-size="12" fill="#ffd166" font-family="PingFang SC,Microsoft YaHei,sans-serif">v3 队形图</text>
+      </svg>
+      <div class="art-badge">第三段桥段 <b>半圆缩位</b> · 11月7日改</div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap layout">
+
+  <main>
+
+    <section id="overview">
+      <div class="sec-head"><span class="kicker">Overview</span><h2>本期概览：108期在练什么</h2></div>
+      <p class="sec-sub">夏柏把108期定位成一次“路演收缩版”的集体作品：动作密度中等，难点集中在第二段副歌的交叉换位与结尾扇形散开。下面三格分别说明结构、人员与场地条件，后面的板块不再重复这些数字。</p>
+      <div class="overview">
+        <div class="ovcell">
+          <h3>编舞结构</h3>
+          <p>前奏8拍 → 主歌16拍 → 副歌A 8八拍 → 副歌B 8八拍 → 桥段4八拍 → 副歌C 8八拍 → 收尾4拍。桥段由<b>圆形走位改半圆</b>，节省两拍切换。</p>
+        </div>
+        <div class="ovcell">
+          <h3>人员分工</h3>
+          <p>路演版9人：A组3人主攻前排斜线，B组4人负责后交叉位，C组2人补位。原定12人的四列横排因场地宽度不足取消。</p>
+        </div>
+        <div class="ovcell">
+          <h3>场地条件</h3>
+          <p>木地板、宽9.6米、进深7米；镜子只到第4排。第三段转身动作要<b>凭感觉对位</b>，靠地胶标记线校准。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="picks">
+      <div class="sec-head"><span class="kicker">Picks</span><h2>精选片段推荐</h2></div>
+      <p class="sec-sub">从11月7日彩排录像里挑了三个最值得先看的片段，按“看得懂、学得会、用得上”的顺序排。</p>
+      <div class="grid3">
+        <a class="pick" href="/#deep">
+          <img src="https://picsum.photos/seed/xiaobai108a/480/270" width="480" height="270" loading="lazy" alt="夏柏108期副歌B交叉换位排练现场" style="object-fit:cover">
+          <div class="body">
+            <span class="meta">彩排 11-07 · 02:14</span>
+            <h3>副歌B交叉换位原速</h3>
+            <p>四拍内两组从两列斜排换成前后错位，脚下走V字，肩线保持平行。</p>
+            <span class="foot">看拆解 →</span>
+          </div>
+        </a>
+        <a class="pick" href="/#guide">
+          <img src="https://picsum.photos/seed/xiaobai108b/480/270" width="480" height="270" loading="lazy" alt="夏柏108期桥段半圆缩位队形" style="object-fit:cover">
+          <div class="body">
+            <span class="meta">彩排 11-06 · 01:38</span>
+            <h3>桥段半圆缩位</h3>
+            <p>9人半圆半径缩到2.4米，第3、4位要主动让位，避免把C组挤出安全线。</p>
+            <span class="foot">看步骤 →</span>
+          </div>
+        </a>
+        <a class="pick" href="/#comments">
+          <img src="https://picsum.photos/seed/xiaobai108c/480/270" width="480" height="270" loading="lazy" alt="夏柏108期收尾扇形散开定格" style="object-fit:cover">
+          <div class="body">
+            <span class="meta">彩排 11-05 · 03:02</span>
+            <h3>收尾扇形散开定格</h3>
+            <p>末拍散成三层，最外侧两人需要提前半拍起脚，否则镜头里会显空。</p>
+            <span class="foot">看反馈 →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="updates">
+      <div class="sec-head"><span class="kicker">Updates</span><h2>最新更新与排练动态</h2></div>
+      <p class="sec-sub">按日期记录可核对的改动，不写“近日”“最近”这类模糊说法。更新停在11月7日，之后的排练计划会在队内群另行通知。</p>
+      <ul class="updates card pad">
+        <li>
+          <time datetime="2026-11-07">11月7日</time>
+          <div>
+            <p class="ut">第三段桥段队形改为斜排半圆<span class="badge">队形图 v3</span></p>
+            <p class="ud">圆形走位缩位后，B组第2位和第3位间距从1.5米压到1.1米，转身时容易碰肘，已改为错身半拍。</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-11-06">11月6日</time>
+          <div>
+            <p class="ut">128BPM剪辑版伴奏发布<span class="badge ok">已对拍</span></p>
+            <p class="ud">第二段副歌前多两拍过门，跟原曲完整版差4秒，队里统一用剪辑版排练。</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-11-05">11月5日</time>
+          <div>
+            <p class="ut">膝盖护具采购到位，点名三人补领</p>
+            <p class="ud">第三段有两次单膝落地，护膝厚度统一为7毫米，太厚的会影响蹲转速度。</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-11-03">11月3日</time>
+          <div>
+            <p class="ut">夏柏路演版由12人缩到9人<span class="badge warn">场地限制</span></p>
+            <p class="ud">现场宽度9.6米放不下四列横排的完整展开，改两列斜排，A组补位顺序同步调整。</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-10-31">10月31日</time>
+          <div>
+            <p class="ut">副歌B脚步从V字改直线小跳</p>
+            <p class="ud">试排发现V字在快速换位时容易踩到自己，直线小跳更快，代价是视觉张力弱一点。</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="channels">
+      <div class="sec-head"><span class="kicker">Index</span><h2>分类入口</h2></div>
+      <p class="sec-sub">按练习需要找内容：想补队形看“队形走位”，想对拍看“音乐拍点”，想练落地看“地板动作”。</p>
+      <div class="chips">
+        <a class="chip" href="/#deep">队形走位 <i>6 条</i></a>
+        <a class="chip" href="/#deep">音乐拍点 <i>4 条</i></a>
+        <a class="chip" href="/#guide">地板动作 <i>3 条</i></a>
+        <a class="chip" href="/#guide">副歌八拍 <i>5 条</i></a>
+        <a class="chip" href="/#faq">护膝与鞋子 <i>4 条</i></a>
+        <a class="chip" href="/#faq">缺练补位 <i>2 条</i></a>
+        <a class="chip" href="/#comments">镜头表现 <i>3 条</i></a>
+        <a class="chip" href="/#news">路演收缩版 <i>3 条</i></a>
+        <a class="chip" href="/#reco">剪辑版伴奏 <i>2 条</i></a>
+        <a class="chip" href="/#guide">体能分配 <i>2 条</i></a>
+      </div>
+    </section>
+
+    <section id="deep">
+      <div class="sec-head"><span class="kicker">Deep Dive</span><h2>深度解析：108期的节奏取舍</h2></div>
+      <div class="prose">
+        <p class="lede">把108期当成一次“减法编舞”看更准确：12人四列横排改成9人两列斜排，动作数量没减，但换位距离缩了三分之一。接下来三节分别对照队形、拍点与体能三个可核对的位置。</p>
+        <div class="cols2">
+          <h3>队形：斜排替代横排换来的两组数字</h3>
+          <p>11月3日的试排记录写明：场地有效宽度<b>9.6米</b>，四列横排完整展开需要<b>11.2米</b>，差1.6米。改成两列斜排后，单组横向占位降到<b>3.1米</b>，A组和C组之间留出0.6米的通行缝。代价在视觉上：横排的正面冲镜强度高，斜排每个镜头只能拍到两组的完整正面，第三组会露侧背。</p>
+          <p>夏柏在11月7日彩排时给出的处理办法是让C组提前半拍回正，用肩线补正面感。这个做法能不能成立，要看镜头机位摆在哪——机位偏左15度以内，补正有效；偏超过20度，侧背就藏不住。</p>
+          <div class="pull">“斜排不是退一步，是把换位距离换成两拍的呼吸。”<cite>——11月7日彩排现场，夏柏对第三段桥段的口头说明</cite></div>
+
+          <h3>拍点：剪辑版多出的两拍过门改变了下拍习惯</h3>
+          <p>原曲完整版在第二段副歌前是干净的四拍进入，剪辑版加了<b>两拍过门</b>，总长差4秒。队里11月6日对拍时确认：如果照完整版习惯数“五六七八”起副歌，会整段抢拍。现在的数法是从过门第一拍重新起“一”，副歌B实际落在第<b>33</b>个八拍位置，不是第32个。</p>
+          <p>这个差异对独练的人更麻烦：跟原曲练到副歌B，进点会早两拍；跟剪辑版练，前奏又少了完整版的氛围铺陈。比较稳妥的办法是两个版本都存，主练剪辑版，复盘看完整版。</p>
+
+          <h3>体能：两次单膝落地压在第三段尾部</h3>
+          <p>第三段副歌C有两次单膝落地，分别在<b>第2个八拍末</b>和<b>第6个八拍中</b>，间隔约<b>7秒</b>。这个密度不算高，但在半圆缩位之后，队形半径小，落地后起身要马上侧移让位，膝盖负担比独练时大。11月5日队里统一了护膝厚度7毫米，理由是太厚的护膝在蹲转时会让重心前移。</p>
+          <p>另一个容易忽略的体能点在前奏：8拍站定加一次集体呼吸，看着轻松，实际是全曲唯一能把心率压下来的窗口。前奏抢着动的队伍，副歌B的换位准确率会掉。</p>
+        </div>
+
+        <table class="checktable">
+          <caption>可核对的三个判断：谁说的、依据什么、怎么验证</caption>
+          <thead>
+            <tr><th>判断</th><th>依据</th><th>验证方式</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>两列斜排比四列横排更适合9.6米场地</td><td>11月3日试排测量：横排需11.2米，斜排占3.1米/组</td><td>用卷尺量现场宽度，对照队形图 v3 标注</td></tr>
+            <tr><td>剪辑版副歌B起于第33个八拍</td><td>11月6日对拍，过门多两拍</td><td>剪辑版从00:00数八拍，与原曲逐段对齐</td></tr>
+            <tr><td>护膝7毫米比更厚的更适合蹲转</td><td>11月5日采购与试戴反馈</td><td>同场地各戴一次做蹲转，比较重心位置</td></tr>
+          </tbody>
+        </table>
+
+        <div class="claim">
+          <b>争议与待核：</b>有队员认为斜排让第三组“像替补”，建议恢复横排并缩减动作幅度。夏柏的回应是场地宽度不会变，缩幅度反而更显弱。<b>转述</b>队内群11月7日的讨论，尚未表决。<b>推测</b>部分：若路演场地换到宽度12米以上的剧场，横排方案有恢复空间，但需要重排队形图，至少两轮彩排。
+        </div>
+      </div>
+    </section>
+
+    <section id="guide">
+      <div class="sec-head"><span class="kicker">Guide</span><h2>跟练体验指南</h2></div>
+      <p class="sec-sub">按顺序做这五步，能把108期的主干动作过一遍。每步都标了时长和判断标准，练完知道自己卡在哪。</p>
+      <ol class="steps">
+        <li>
+          <b>先对剪辑版拍点，再动脚（约8分钟）</b>
+          <p>戴耳机从00:00数到副歌B起点，确认第33个八拍的位置。数错就重来，别急着跟动作。</p>
+        </li>
+        <li>
+          <b>拆副歌A的肩胯组合（约12分钟）</b>
+          <p>8个八拍里有3个是重复的肩胯组合，先单独练这3个，再连起来。判断标准：肩线和胯线不同时到位，说明发力顺序反了。</p>
+        </li>
+        <li>
+          <b>走副歌B交叉换位的空位（约15分钟）</b>
+          <p>不上半身动作，只走V字脚步和错身半拍。两人一组，一人走位一人看间距，间距小于1.1米就喊停。</p>
+        </li>
+        <li>
+          <b>练桥段半圆缩位的让位（约10分钟）</b>
+          <p>9人半圆半径2.4米，第3、4位主动让位。独练时用胶带在地上贴半圆标记，走三次确认落脚点。</p>
+        </li>
+        <li>
+          <b>合收尾扇形散开（约10分钟）</b>
+          <p>末拍散成三层，最外侧两人提前半拍起脚。录一次回看，检查镜头里有没有空档。</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="compare">
+      <div class="sec-head"><span class="kicker">Compare</span><h2>路演版与排练版对照</h2></div>
+      <p class="sec-sub">两个版本共用一套动作，差别在队形、人数和切换节奏。排练时用排练版，上台前一周切路演版。</p>
+      <div class="compare">
+        <div class="cpanel">
+          <h3>排练版 <span class="tag">12人 · 四列横排</span></h3>
+          <ul>
+            <li>场地宽度按11.2米预留，镜子全覆盖</li>
+            <li>桥段保留完整圆形走位，半径3米</li>
+            <li>副歌B换位距离长，V字脚步完整</li>
+            <li>适合练整齐度，镜头要求低</li>
+          </ul>
+        </div>
+        <div class="cpanel b">
+          <h3>路演版 <span class="tag">9人 · 两列斜排</span></h3>
+          <ul>
+            <li>有效宽度9.6米，需留0.6米通行缝</li>
+            <li>桥段缩半圆，半径2.4米，省两拍切换</li>
+            <li>副歌B改直线小跳，错身半拍避碰肘</li>
+            <li>C组提前半拍回正补正面感</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="sec-head"><span class="kicker">FAQ</span><h2>常见问题</h2></div>
+      <p class="sec-sub">问题都来自队内群和跟练评论区，答案只讲能动的东西。</p>
+      <details>
+        <summary>夏柏108期编舞的BPM和原曲版本怎么确认？</summary>
+        <div class="ans">排练版以128BPM的剪辑版为准，鼓点在第二段副歌前多出两拍过门，跟原曲完整版差4秒。队里11月6日统一用剪辑版对拍，跟练的人也建议先锁这个版本。</div>
+      </details>
+      <details>
+        <summary>零基础能跟108期的副歌段吗？</summary>
+        <div class="ans">副歌段8个八拍里有3个八拍是重复的肩胯组合，零基础可先练这3个八拍。第二段副歌的交叉换位需要两人配合，建议先单练脚步，再找人对间距。</div>
+      </details>
+      <details>
+        <summary>夏柏路演版和排练版队形差多少？</summary>
+        <div class="ans">路演版因场地宽度限制，把原定四列横排改成两列斜排，第三段桥段的圆形走位缩为半圆，人数从12人减到9人，换位距离缩了约三分之一。</div>
+      </details>
+      <details>
+        <summary>108期排练要准备哪些护具和鞋子？</summary>
+        <div class="ans">地板动作用护膝，第三段有两次单膝落地，队里统一7毫米厚度。鞋子选薄底帆布鞋，木地板摩擦力够，别穿厚底气垫鞋，蹲转时重心会飘。</div>
+      </details>
+      <details>
+        <summary>缺一次排练怎么补108期的走位？</summary>
+        <div class="ans">先看队内走位图第3版，重点补第二段副歌的交叉换位和结尾的扇形散开。这两处是缺练最容易错位的节点，其他段落有重复动作可先跳过。</div>
+      </details>
+      <details>
+        <summary>半圆缩位时后排看不到前排怎么办？</summary>
+        <div class="ans">把视线放到前排第2位的肩线，不看脚。9人半圆半径2.4米，后排只需跟肩线，不用对齐脚步，脚步由地胶标记线校准。</div>
+      </details>
+    </section>
+
+    <section id="comments">
+      <div class="sec-head"><span class="kicker">Voices</span><h2>舞者反馈</h2></div>
+      <p class="sec-sub">来自队内群与跟练区的留言，保留原话语气，差评也照登。</p>
+      <div class="comments">
+        <div class="cmt">
+          <div class="who"><span class="ava a1">B2</span> B组二号 · 11月7日 <span class="stars">★★★★☆</span></div>
+          <p><span class="ref">副歌B交叉换位</span>错身半拍改得好，之前和老四一直碰肘，现在能过去。但直线小跳看着比V字弱，镜头里像赶路。</p>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="ava a2">C1</span> C组一号 · 11月7日 <span class="stars">★★★☆☆</span></div>
+          <p><span class="ref">斜排</span>第三组提前半拍回正，我练了一晚上才顺。角度稍微不对就露侧背，压力全在C组这边。</p>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="ava a3">跟练</span>路人跟练 · 11月6日 <span class="stars">★★★★★</span></div>
+          <p>剪辑版伴奏对拍清楚，过门多两拍这个坑要不是看了对拍说明，我肯定抢。副歌A的3个八拍循环对新手友好。</p>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="ava a4">A1</span> A组一号 · 11月5日 <span class="stars">★★☆☆☆</span></div>
+          <p><span class="ref">护膝7毫米</span>太薄了，单膝落地第二下还是硌。建议按个人情况选，别一刀切，我下次换厚的。</p>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="ava a2">观演</span>现场观众 · 11月4日 <span class="stars">★★★★☆</span></div>
+          <p>扇形散开那一拍很抓人，最外侧两人提前起脚之后，整个画面就满了，比彩排时好看。</p>
+        </div>
+        <div class="cmt">
+          <div class="who"><span class="ava a3">B4</span> B组四号 · 11月3日 <span class="stars">★★★☆☆</span></div>
+          <p>缩到9人之后每个人都要多担一点，前奏的呼吸窗口反而更重要。我第一遍练完心率没降下来。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="news">
+      <div class="sec-head"><span class="kicker">News</span><h2>相关资讯</h2></div>
+      <p class="sec-sub">只列与108期排练、场地、版本相关的记录，标注来源平台。</p>
+      <ul class="news">
+        <li><span class="date">11-07</span><a href="/#updates">队形图 v3 发布，桥段缩半圆</a><span class="plat">队内群</span></li>
+        <li><span class="date">11-06</span><a href="/#deep">128BPM剪辑版伴奏对拍确认</a><span class="plat">音频文件</span></li>
+        <li><span class="date">11-05</span><a href="/#guide">护膝7毫米统一采购与试戴</a><span class="plat">队内群</span></li>
+        <li><span class="date">11-03</span><a href="/#compare">路演版由12人缩到9人</a><span class="plat">排练记录</span></li>
+        <li><span class="date">10-31</span><a href="/#deep">副歌B脚步由V字改直线小跳</a><span class="plat">排练录像</span></li>
+      </ul>
+    </section>
+
+    <section id="reco">
+      <div class="sec-head"><span class="kicker">More</span><h2>相关推荐</h2></div>
+      <p class="sec-sub">继续深挖的入口，都指向本页已有内容，不跳外链。</p>
+      <div class="recos">
+        <a href="/#deep">副歌B交叉换位拆解</a>
+        <a href="/#guide">九人半圆缩位练习法</a>
+        <a href="/#compare">两列斜排与四列横排对照</a>
+        <a href="/#faq">剪辑版伴奏对拍方法</a>
+        <a href="/#guide">单膝落地护膝选择</a>
+        <a href="/#updates">队形图 v3 变更记录</a>
+        <a href="/#comments">C组补位压力反馈</a>
+        <a href="/#deep">收尾扇形散开提前半拍</a>
+      </div>
+    </section>
+
+  </main>
+
+  <aside>
+    <div class="sidecard">
+      <h2>本页导航</h2>
+      <ul class="sidenav" id="sidenav">
+        <li><a href="/#overview">本期概览</a></li>
+        <li><a href="/#picks">精选片段</a></li>
+        <li><a href="/#updates">最新更新</a></li>
+        <li><a href="/#channels">分类入口</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">跟练指南</a></li>
+        <li><a href="/#compare">版本对照</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">舞者反馈</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#reco">相关推荐</a></li>
+      </ul>
+    </div>
+
+    <div class="sidecard">
+      <h2>跟练热度排序</h2>
+      <ol class="rank">
+        <li><span><b>副歌B交叉换位</b> · 多人卡点</span></li>
+        <li><span><b>桥段半圆缩位</b> · 让位难</span></li>
+        <li><span><b>收尾扇形散开</b> · 镜头友好</span></li>
+        <li><span><b>副歌A肩胯循环</b> · 新手入口</span></li>
+        <li><span><b>前奏呼吸窗口</b> · 易被忽略</span></li>
+      </ol>
+    </div>
+
+    <div class="sidecard tipzone">
+      <h2>排练提醒</h2>
+      <p>11月7日的改动只涉及第三段桥段，前两段照旧。</p>
+      <ul>
+        <li>队形图认准 v3，旧版别再打印</li>
+        <li>对拍统一用剪辑版</li>
+        <li>护膝厚度按个人情况微调</li>
+        <li>半圆缩位半径 2.4 米</li>
+      </ul>
+    </div>
+  </aside>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#2a2144"/>
+            <path d="M17 45 L31 17 L45 45" stroke="#ff7a45" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="31" cy="49" r="4" fill="#ffd166"/>
+          </svg>
+          <span>ks舞团夏柏108期</span>
+        </div>
+        <p class="fpos">把一支收缩到九人的路演编舞拆成能上脚的拍点、换位和护具选择。</p>
+        <p class="fmeta">页面更新：2026年11月7日，对应队形图 v3 与剪辑版对拍说明。<br>内容含示例化排练记录，具体安排以队内群通知为准。</p>
+      </div>
+      <div>
+        <h2>练舞内容</h2>
+        <ul class="flinks">
+          <li><a href="/#deep">队形走位拆解</a></li>
+          <li><a href="/#guide">音乐拍点跟练</a></li>
+          <li><a href="/#guide">地板动作护具</a></li>
+          <li><a href="/#compare">排练版与路演版</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>了解本期</h2>
+        <ul class="flinks">
+          <li><a href="/#overview">本期概览</a></li>
+          <li><a href="/#updates">排练更新</a></li>
+          <li><a href="/#comments">舞者反馈</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>快速入口</h2>
+        <ul class="flinks">
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#channels">分类入口</a></li>
+          <li><a href="/#reco">相关推荐</a></li>
+          <li><a href="/#top">回到顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbottom">
+      <span>© 2026 ks舞团夏柏108期 · 内容为示例化整理</span>
+      <span>角色、场地与时间均为排练示例数据</span>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var mb=document.getElementById('menubtn'),nav=document.getElementById('sitenav');
+  if(mb&&nav){
+    mb.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      mb.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.innerWidth<=820){
+        nav.classList.remove('open');mb.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var top=document.getElementById('totop');
+  function onScroll(){
+    if(window.scrollY>420){top.classList.add('on')}else{top.classList.remove('on')}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  top.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  var navLinks=[].slice.call(document.querySelectorAll('#sidenav a'));
+  var secs=navLinks.map(function(a){
+    var id=a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  });
+  function highlight(){
+    var pos=window.scrollY+180,idx=-1;
+    secs.forEach(function(s,i){if(s&&s.offsetTop<=pos)idx=i;});
+    navLinks.forEach(function(a,i){a.classList.toggle('active',i===idx);});
+  }
+  window.addEventListener('scroll',highlight,{passive:true});highlight();
+
+  var form=document.getElementById('searchform'),q=document.getElementById('q'),note=document.getElementById('searchnote');
+  var index=[];
+  document.querySelectorAll('main section, aside .sidecard, footer').forEach(function(sec){
+    index.push({el:sec,text:sec.textContent.replace(/\s+/g,' ')});
+  });
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var kw=q.value.trim();
+    if(!kw){note.textContent='请输入要查找的队形、拍点或动作名称。';note.classList.add('on');return;}
+    var hit=null;
+    for(var i=0;i<index.length;i++){
+      if(index[i].text.indexOf(kw)>-1){hit=index[i];break;}
+    }
+    if(!hit){
+      note.textContent='没有找到“'+kw+'”相关内容，试试“交叉换位”“半圆缩位”“剪辑版伴奏”。';
+      note.classList.add('on');
+      return;
+    }
+    note.classList.remove('on');
+    var target=hit.el;
+    if(!target.id){target.setAttribute('tabindex','-1');}
+    target.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+})();
+</script>
+</body>
+                                                                      </html>
